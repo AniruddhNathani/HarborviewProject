@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Medicine Clinic</title>
+</head>
+<body>
+<h1 id = "question">{{language[index].question[question_index]}}</h1>
+{% block images %}{% endblock %}
+<form method="POST">
+<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language[index].option[0]}}">
+<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language[index].option[1]}}">
+</form>
+<h3>{{language[index].honesty}}</h3>
+<img src="/static/speaker_90.png">
+</body>
+</html>

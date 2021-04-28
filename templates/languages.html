@@ -10,13 +10,21 @@
 </head>
 <body>
 <center>
-<div class="container">
-    <img src="/static/HarborviewLogo.png">
-    <br>
-    <img src="/static/TranslateSymbol.png">
-    <h3>Please Select your Language</h3>
-
-</div>
+    <div class="container">
+        <img src="/static/HarborviewLogo.png">
+        <br>
+        <h3>Please Select your Language</h3>
+    </div>
+    <div id = "button_layout">
+        <input type="button" id = "bt1" class = "btn" value = "{{language[0].name}}">
+        <input type="button" id = "bt2" class = "btn" value = "{{language[0].name}}">
+        <input type="button" id = "bt3" class = "btn" value = "{{language[0].name}}"> <br>
+        <input type="button" id = "bt4" class = "btn" value = "{{language[0].name}}">
+        <input type="button" id = "bt5" class = "btn" value = "{{language[0].name}}">
+        <input type="button" id = "bt6" class = "btn" value = "{{language[0].name}}">
+    </div>
 </center>
 </body>
 </html>
+
+
