@@ -3,13 +3,14 @@ import speech_recognition as sr
 
 # from HarborviewProject.model import db
 
-
+# from HarborviewProject.model import model
 app = Flask(__name__)
 
 
 @app.route("/")
 def welcome():
-    return render_template("welcome.html")
+    new = 123
+    return render_template("welcome.html", ab=new)
 
 
 @app.route("/languages")
