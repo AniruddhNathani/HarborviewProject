@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Medicine Clinic</title>
+</head>
+<body>
+<input type = "button" id="home" value="home">
+<h1>The patient has provided the following responses</h1>
+#For the receptionist, they always see the question in English, so make sure you pass language[0].question to the variable questions here.
+#response must be a list containing the responses for each question, as 1 (Yes) or 0 (No) regardless of patient response language.
+{% for question in questions %}
+{{questions}} {{response[loop.index0]}} {% if response[loop.index0] == 1 %} <img src="/static/alert.png"> {% endif %}
+{% endfor %}
+</body>
+</html>
+
+#TBD declare flag variable to check if any of the responses is yes and display rroming prompt ....
