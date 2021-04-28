@@ -5,13 +5,13 @@
     <title>International Medicine Clinic</title>
 </head>
 <body>
-{% block content %}
-<h1 id = "question">{{language.question[index]}}</h1>
+<h1 id = "question">{{language[index].question[question_index]}}</h1>
 {% block images %}{% endblock %}
-<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language.option[index][0]}}">
-<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.option[index][1]}}">
-<h3>{{language.honesty[index]}}</h3>
+<form method="POST">
+<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language[index].option[0]}}">
+<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language[index].option[1]}}">
+</form>
+<h3>{{language[index].honesty}}</h3>
 <img src="/static/speaker_90.png">
-{% endblock %}
 </body>
 </html>
