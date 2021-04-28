@@ -4,32 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Encode Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Welcome</title>
+
+    <style>
+
+      h1 {
+        font-family: Encode Sans;
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      h3 {
+        font-family: Encode Sans;
+        font-style: normal;
+        font-weight: normal;
+      }
+
+
+      /* Style the navigation bar links a */
+      .navbar a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 10px 30px;
+          margin: 0;
+          text-decoration: none;
+          background-color: lightgray;
+          width: 23%;
+          height: 20%;
+          font-size: 20px;
+          font-family: Encode Sans;
+          font-style: normal;
+          font-weight: normal;
+
+      }
+
+      /* Change color on hover */
+      .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+      }
+
+    </style>
 </head>
 <body>
 <center>
 
 <div class="container">
-    <img src="/static/HarborviewLogo.png">
+    <img srcset="/static/HarborviewLogo.png">
     <h1>Welcome to Harborview {{ab}}</h1>
     <h3>Please Select Your Role</h3>
     <br>
     <div class="d-flex justify-content-center align-items-center" style="height:100px;">
-         <div class="row">
-            <button>
-                Front Desk
-            </button>
-            </a>
-        </div>
-        <br>
         <div class="row">
-            <button>
-                <a href="/languages">
-                Back Office
+            <div class="navbar">
+                <a href="/">
+                Front-Desk
                 </a>
-            </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="navbar">
+                <a href="/languages">
+                Back-Office
+                </a>
+            </div>
             </a>
         </div>
         </div>
