@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-# from HarborviewProject.model import db
+from model import db
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
@@ -14,7 +14,15 @@ def welcome():
 
 @app.route("/languages")
 def languages():
-    return render_template("languages.html")
+    languages = db
+    return render_template("languages.html", language=languages)
+
+
+@app.route("/screening/<int:index>")
+def screening(index):
+    languages = db
+    questions = languages[index]
+    return render_template("screening_q.html", language=questions)
 
 # @app.route("/card/<int: index>")
 # def card_view(index):

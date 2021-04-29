@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Amharic",
+    "index": 1,
+    "questions": [
+      {
+        "ques": "Do you have a fever?",
+        "ques_id": 0,
+        "response": [
+          {
+            "text": "Yes",
+            "resp_id": 0
+          },
+          {
+            "text": "No",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "ques": "Do you have runny nose?",
+        "q_ind": 1,
+        "response": "Yes"
+      }
+    ]
+  },
+  {
+    "name": "Arabic",
+    "index": 2
+  },
+  {
+    "name": "Oromo",
+    "index": 3
+  },
+  {
+    "name": "Somali",
+    "index": 4
+  },
+  {
+    "name": "Spanish",
+    "index": 5
+  },
+  {
+    "name": "Vietnamese",
+    "index": 6
+  }
+]
