@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>International Medicine Clinic</title>
 </head>
 <body>
-<h1 id = "question">{{language[index].question[question_index]}}</h1>
+<h1 id = "question">{{language.questions[0].ques}}</h1>
 {% block images %}{% endblock %}
+<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language.questions[1].response}}"/>
+<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.questions[1].response}}"/>
+
+
 <form method="POST">
-<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language[index].option[0]}}">
-<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language[index].option[1]}}">
 </form>
-<h3>{{language[index].honesty}}</h3>
 <img src="/static/speaker_90.png">
 </body>
 </html>
