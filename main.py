@@ -1,30 +1,30 @@
-from flask import Flask, render_template
-
-from model import db
+from flask import Flask, render_template, request
+from model import load_db
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def welcome():
-    new = 123
-    return render_template("welcome.html", ab=new)
+    return render_template("welcome.html")
 
 
-@app.route("/languages")
+@app.route("/languages", methods=["GET", "POST"])
 def languages():
-    languages = db
-    return render_template("languages.html", language=languages)
+    return render_template("languages.html", language=db, response_list=response_list)
 
 
-@app.route("/screening/<int:index>")
-def screening(index):
-    languages = db
-    questions = languages[index]
-    return render_template("screening_q.html", language=questions)
+@app.route("/lang_index=<int:index>/screening/screening_one", methods=["GET", "POST"])
+def screening_one(index):
+    db = load_db()
+    language = db[index]
+    return render_template("screening_one.html", language=language, index=index)
 
-# @app.route("/card/<int: index>")
-# def card_view(index):
-#     card = db[index]
-#     return render_template("card.html", card=card)
+
+@app.route("/lang_index=<int:index>/screening/screening_two", methods=["GET", "POST"])
+def screening_two(index):
+    db = load_db()
+    language = db[index]
+    return render_template("screening_two.html", language=language)
+

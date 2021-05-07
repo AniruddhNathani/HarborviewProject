@@ -6,10 +6,10 @@
     <title>International Medicine Clinic</title>
 </head>
 <body>
-<h1 id = "question">{{language.questions[0].ques}}</h1>
+<h1 id = "question">{{language.questions[1].question}}</h1>
 {% block images %}{% endblock %}
-<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language.questions[1].response}}"/>
-<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.questions[1].response}}"/>
+<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language.questions[1].response[0].text}}"/>
+<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.questions[1].response[1].text}}"/>
 
 
 <form method="POST">

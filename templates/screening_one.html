@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>International Medicine Clinic</title>
+</head>
+<body>
+<h1 id = "question">{{language.questions[0].question}}</h1>
+{% block images %}{% endblock %}
+<img src="/static/check_250.png">
+<a href = "/lang_index={{index}}/screening/screening_two">
+<input type="button" id = "bt1" class = "btn" value = "{{language.questions[0].response[0].text}}"/>
+</a>
+<a href="/lang_index={{index}}/screening/screening_two">
+<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.questions[0].response[1].text}}"/>
+</a>
+
+<form method="POST">
+</form>
+<img src="/static/speaker_90.png">
+</body>
+</html>
