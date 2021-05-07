@@ -7,8 +7,8 @@ def load_db():
 
 
 def response():
-    temp_list = ["fuck off"]
-    return temp_list
+    response_list = ["Hi"]
+    return response_list
 
 
 db = load_db()

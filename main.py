@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from model import load_db
+from model import load_db, response
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
@@ -12,6 +12,8 @@ def welcome():
 
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
+    db = load_db()
+    response_list = response()
     return render_template("languages.html", language=db, response_list=response_list)
 
 
