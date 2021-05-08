@@ -19,6 +19,7 @@ def welcome():
 def languages():
     db = load_db()
     session["response_list"] = []
+    session["flag"] = 0
     return render_template("languages.html", language=db)
 
 
@@ -26,7 +27,6 @@ def languages():
 def screening_one(index):
     db = load_db()
     language = db[index]
-    session["response_list"].append(["Bye"])
     return render_template("screening_one.html", language=language, index=index)
 
 
@@ -34,9 +34,27 @@ def screening_one(index):
 def screening_two(index):
     db = load_db()
     language = db[index]
-    session["response_list"].append(["Bye 2"])
-    print(session["response_list"])
-    return render_template("screening_two.html", language=language)
+    if request.method == "POST":
+        if request.form.get("yes_button"):
+            session["response_list"] += ["yes"]
+            session["flag"] = 1
+        elif request.form.get("no_button"):
+            session["response_list"] += ["no"]
+
+    return render_template("screening_two.html", language=language, index=index)
+
+
+@app.route("/lang_index=<int:index>/screening/final_response", methods=["GET", "POST"])
+def final_response(index):
+    if request.method == "POST":
+        if request.form.get("yes_button"):
+            session["response_list"] += ["yes"]
+            session["flag"] = 1
+        elif request.form.get("no_button"):
+            session["response_list"] += ["no"]
+
+    print(session["response_list"], session["flag"])
+    return render_template("final_response.html")
 
 
 if __name__ == "__main__":

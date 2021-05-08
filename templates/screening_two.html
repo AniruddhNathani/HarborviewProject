@@ -8,11 +8,12 @@
 <body>
 <h1 id = "question">{{language.questions[1].question}}</h1>
 {% block images %}{% endblock %}
-<img src="/static/check_250.png"> <input type="button" id = "bt1" class = "btn" value = "{{language.questions[1].response[0].text}}"/>
-<img src="/static/cross_250.png"> <input type="button" id = "bt2" class = "btn" value = "{{language.questions[1].response[1].text}}"/>
+<form method="POST" action = "/lang_index={{index}}/screening/final_response">
+    <img src="/static/check_250.png">
+    <button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button>
 
-
-<form method="POST">
+    <img src="/static/cross_250.png">
+    <button type="submit" name="no_button" class = "btn" value = "no">No</button>
 </form>
 <img src="/static/speaker_90.png">
 </body>
