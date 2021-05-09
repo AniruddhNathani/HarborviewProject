@@ -9,6 +9,7 @@ app = Flask(__name__)
 SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 # Session(app)
+app.secret_key = 'BAD_SECRET_KEY'
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
