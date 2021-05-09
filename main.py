@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, session
-from model import load_db
-from flask_session import Session
-
+import model as md
+# from flask_session import Session
+import os
+from pathlib import Path
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
 SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
-Session(app)
-
+# Session(app)
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
@@ -17,7 +17,8 @@ def welcome():
 
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
-    db = load_db()
+
+    db = md.static_load_db()
     session["response_list"] = []
     session["flag"] = 0
     return render_template("languages.html", language=db)
@@ -25,14 +26,14 @@ def languages():
 
 @app.route("/lang_index=<int:index>/screening/screening_one", methods=["GET", "POST"])
 def screening_one(index):
-    db = load_db()
+    db = md.static_load_db()
     language = db[index]
     return render_template("screening_one.html", language=language, index=index)
 
 
 @app.route("/lang_index=<int:index>/screening/screening_two", methods=["GET", "POST"])
 def screening_two(index):
-    db = load_db()
+    db = md.static_load_db()
     language = db[index]
     if request.method == "POST":
         if request.form.get("yes_button"):
@@ -53,8 +54,20 @@ def final_response(index):
         elif request.form.get("no_button"):
             session["response_list"] += ["no"]
 
-    print(session["response_list"], session["flag"])
+    # print(session["response_list"], session["flag"])
     return render_template("final_response.html")
+
+@app.route("/patient-responses") #, methods=["GET", "POST"]
+def patient_response():
+    base_path = Path(os.getcwd()+"/flask_session")
+
+    list_of_files = {}
+    for filename in os.listdir(base_path):
+        fn = base_path.joinpath(filename)
+        with open(fn) as f:
+            list_of_files[filename] = f.read()
+
+    return render_template("patient_responses.html", response=list_of_files)
 
 
 if __name__ == "__main__":
