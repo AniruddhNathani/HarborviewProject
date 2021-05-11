@@ -1,9 +1,9 @@
-import json
+from flask import json
 
 
-def load_db():
-    with open("data.json") as f:
+def static_load_db():
+    with open("data.json", encoding='utf-8') as f:
         return json.load(f)
 
 
-db = load_db()
+#db = load_db()
