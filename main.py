@@ -3,6 +3,9 @@ import model as md
 # from flask_session import Session
 import os
 from pathlib import Path
+from model import load_db
+from flask_session import Session
+from collections import defaultdict
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
@@ -18,9 +21,9 @@ def welcome():
 
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
-
     db = md.static_load_db()
-    session["response_list"] = []
+    session.clear()
+    session["response_list"] = dict(defaultdict())
     session["flag"] = 0
     return render_template("languages.html", language=db)
 
@@ -38,11 +41,9 @@ def screening_two(index):
     language = db[index]
     if request.method == "POST":
         if request.form.get("yes_button"):
-            session["response_list"] += ["yes"]
-            session["flag"] = 1
+            session["response_list"]["screen_one"] = "yes"
         elif request.form.get("no_button"):
-            session["response_list"] += ["no"]
-
+            session["response_list"]["screen_one"] = "no"
     return render_template("screening_two.html", language=language, index=index)
 
 
@@ -50,12 +51,18 @@ def screening_two(index):
 def final_response(index):
     if request.method == "POST":
         if request.form.get("yes_button"):
-            session["response_list"] += ["yes"]
-            session["flag"] = 1
+            session["response_list"]["screen_two"] = "yes"
         elif request.form.get("no_button"):
-            session["response_list"] += ["no"]
+            session["response_list"]["screen_two"] = "no"
 
-    # print(session["response_list"], session["flag"])
+    for key, value in session["response_list"].items():
+        print(value)
+        if value == "yes":
+            session["flag"] = 1
+            break
+        else:
+            session["flag"] = 0
+    print(session["response_list"], session["flag"])
     return render_template("final_response.html")
 
 @app.route("/patient-responses") #, methods=["GET", "POST"]
