@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, session
 from model import load_db
 from flask_session import Session
-
+from collections import defaultdict
 
 # from HarborviewProject.model import model
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def welcome():
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
     db = load_db()
-    session["response_list"] = []
+    session["response_list"] = dict(defaultdict())
     session["flag"] = 0
     return render_template("languages.html", language=db)
 
@@ -36,11 +36,10 @@ def screening_two(index):
     language = db[index]
     if request.method == "POST":
         if request.form.get("yes_button"):
-            session["response_list"] += ["yes"]
+            session["response_list"]["screen_one"] = "yes"
             session["flag"] = 1
         elif request.form.get("no_button"):
-            session["response_list"] += ["no"]
-
+            session["response_list"]["screen_one"] = "no"
     return render_template("screening_two.html", language=language, index=index)
 
 
@@ -48,10 +47,10 @@ def screening_two(index):
 def final_response(index):
     if request.method == "POST":
         if request.form.get("yes_button"):
-            session["response_list"] += ["yes"]
+            session["response_list"]["screen_two"] = "yes"
             session["flag"] = 1
         elif request.form.get("no_button"):
-            session["response_list"] += ["no"]
+            session["response_list"]["screen_two"] = "no"
 
     print(session["response_list"], session["flag"])
     return render_template("final_response.html")
