@@ -18,6 +18,7 @@ def welcome():
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
     db = load_db()
+    session.clear()
     session["response_list"] = dict(defaultdict())
     session["flag"] = 0
     return render_template("languages.html", language=db)
@@ -37,7 +38,6 @@ def screening_two(index):
     if request.method == "POST":
         if request.form.get("yes_button"):
             session["response_list"]["screen_one"] = "yes"
-            session["flag"] = 1
         elif request.form.get("no_button"):
             session["response_list"]["screen_one"] = "no"
     return render_template("screening_two.html", language=language, index=index)
@@ -48,10 +48,16 @@ def final_response(index):
     if request.method == "POST":
         if request.form.get("yes_button"):
             session["response_list"]["screen_two"] = "yes"
-            session["flag"] = 1
         elif request.form.get("no_button"):
             session["response_list"]["screen_two"] = "no"
 
+    for key, value in session["response_list"].items():
+        print(value)
+        if value == "yes":
+            session["flag"] = 1
+            break
+        else:
+            session["flag"] = 0
     print(session["response_list"], session["flag"])
     return render_template("final_response.html")
 
