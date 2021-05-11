@@ -2,6 +2,7 @@
   {
     "name": "አማርኛ",
     "index": 1,
+    "alert": "You have selected Amheric",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -36,6 +37,7 @@
   {
     "name": "العربية",
     "index": 2,
+    "alert": "You have selected Arabic",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -70,6 +72,7 @@
   {
     "name": "Afaan Oromoo",
     "index": 3,
+    "alert": "You have selected Oromo",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -104,6 +107,7 @@
   {
     "name": "Somaali",
     "index": 4,
+    "alert": "You have selected Somaali",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -138,6 +142,7 @@
   {
     "name": "廣東話 ",
     "index": 5,
+    "alert": "You have selected Cantonese",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -172,6 +177,7 @@
   {
     "name": "Tiếng Việt",
     "index": 6,
+    "alert": "You have selected Vietnamese",
     "questions": [
       {
         "question": "Do you have a fever?",
@@ -206,6 +212,7 @@
   {
     "name" : "Español",
     "index": 7,
+    "alert": "You have selected Spanish",
     "questions": [
       {
         "question": "Do you have a fever?",
