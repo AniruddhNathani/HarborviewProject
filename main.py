@@ -67,15 +67,16 @@ def final_response(index):
 
 @app.route("/patient-responses")
 def patient_response():
-    base_path = Path(os.getcwd()+"/flask_session")
-
-    list_of_files = {}
-    for filename in os.listdir(base_path):
-        fn = base_path.joinpath(filename)
-        with open(fn) as f:
-            list_of_files[filename] = f.read()
-
-    return render_template("patient_responses.html", response=list_of_files)
+    # base_path = Path(os.getcwd()+"/flask_session")
+    # list_of_files = {}
+    # for filename in os.listdir(base_path):
+    #     fn = base_path.joinpath(filename)
+    #     print("HELLLLLLLEOO",fn)
+    #     with open(fn) as f:
+    #         f = f.decode()
+    #         list_of_files[filename] = f.read()
+    k = str(session["response_list"])
+    return render_template("patient_responses.html", response=k)
 
 
 if __name__ == "__main__":
