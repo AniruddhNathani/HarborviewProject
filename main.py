@@ -3,7 +3,6 @@ import model as md
 # from flask_session import Session
 import os
 from pathlib import Path
-from model import load_db
 from flask_session import Session
 from collections import defaultdict
 
@@ -11,8 +10,9 @@ from collections import defaultdict
 app = Flask(__name__)
 SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
-# Session(app)
+Session(app)
 app.secret_key = 'BAD_SECRET_KEY'
+
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
@@ -64,7 +64,8 @@ def final_response(index):
     print(session["response_list"], session["flag"])
     return render_template("final_response.html")
 
-@app.route("/patient-responses") #, methods=["GET", "POST"]
+
+@app.route("/patient-responses")
 def patient_response():
     base_path = Path(os.getcwd()+"/flask_session")
 
