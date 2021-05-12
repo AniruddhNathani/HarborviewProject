@@ -27,14 +27,14 @@ def languages():
 
 @app.route("/lang_index=<int:index>/screening/screening_one", methods=["GET", "POST"])
 def screening_one(index):
-    db = load_db()
+    db = md.static_load_db()
     language = db[index]
     return render_template("screening_one.html", language=language, index=index)
 
 
 @app.route("/lang_index=<int:index>/screening/screening_two", methods=["GET", "POST"])
 def screening_two(index):
-    db = load_db()
+    db = md.static_load_db()
     language = db[index]
     if request.method == "POST":
         if request.form.get("yes_button"):

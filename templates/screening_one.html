@@ -17,6 +17,11 @@
     <button type="submit" name="no_button" class = "btn" value = "no">No</button>
 </form>
 
-<!--<img src="/static/speaker_90.png">-->
+<h1> My audio Language - {{index}} </h1>
+<audio autoplay>
+   <source src="{{ url_for('static', filename='French9.wav') }}">
+</audio>
+
+<img src="/static/speaker_90.png">
 </body>
 </html>
