@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session
-from model import load_db
+import model as md
 from flask_session import Session
 from collections import defaultdict
 
@@ -8,6 +8,7 @@ app = Flask(__name__)
 SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
+app.secret_key = 'BAD_SECRET_KEY'
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -17,7 +18,7 @@ def welcome():
 
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
-    db = load_db()
+    db = md.static_load_db()
     session.clear()
     session["response_list"] = dict(defaultdict())
     session["flag"] = 0
@@ -52,7 +53,6 @@ def final_response(index):
             session["response_list"]["screen_two"] = "no"
 
     for key, value in session["response_list"].items():
-        print(value)
         if value == "yes":
             session["flag"] = 1
             break
@@ -60,6 +60,12 @@ def final_response(index):
             session["flag"] = 0
     print(session["response_list"], session["flag"])
     return render_template("final_response.html")
+
+
+@app.route("/patient-responses")
+def patient_response():
+    k = str(session["response_list"])
+    return render_template("patient_responses.html", response=k)
 
 
 if __name__ == "__main__":

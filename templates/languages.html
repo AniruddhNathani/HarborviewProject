@@ -34,7 +34,6 @@
           margin: 5px 5px;
           text-decoration: none;
           background-color: lightgray;
-<!--          width: 33.33%;-->
           height: 20%;
           font-size: 20px;
           font-family: Encode Sans;
@@ -61,22 +60,38 @@
           background-color: #ddd;
           color: black;
         }
-
         .crop {
                 width: 90%;
                 height: 90%;
                 overflow: visible;
                 margin: -20px 0 0 0;
         }
-
         .crop img {
             width: 499px;
             height: 420px;
             margin: -60px 0 0 0;
         }
-
-
     </style>
+    <script>
+        function myFunction() {
+
+        var buttons = document.getElementsByClassName('button')
+        for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(alert) {
+
+
+        })
+        }
+<!--        var lang = document.getElementById('language_select');-->
+<!--        if (confirm("Press a button!")) {-->
+<!--        txt = "You pressed OK!";-->
+<!--        } else {-->
+<!--        txt = "You pressed Cancel!";-->
+<!--        }-->
+<!--        document.getElementById("demo").innerHTML = txt;-->
+<!--        }-->
+<!--        var myWindow = window.open();-->
+    </script>
 </head>
 <body>
 <center>
@@ -86,15 +101,16 @@
         </div>
         <h3>Please Select your Language</h3>
     </div>
+    <form onclick="myFunction()" id="language_select">
     <div id = "button_layout" class="d-flex justify-content-center align-items-center" style="height:100px;">
         <div class="langnavbar">
             <div class="column">
-                <a href="/lang_index={{language[0].index}}/screening/screening_one">
+                <a href="/lang_index={{language[0].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[0].alert}} )">
                     {{language[0].name}}
                 </a>
             </div>
             <div class="column">
-                <a href="/lang_index={{language[1].index}}/screening/screening_one">
+                <a href="/lang_index={{language[1].index}}/screening/screening_one" class = button onclick="myFunction({{language[1].alert}} )">
                     {{language[1].name}}
                 </a>
             </div>
@@ -104,7 +120,6 @@
                 </a>
             </div>
         </div>
-
         <div class="langnavbar">
             <div class="column">
                 <a href="/lang_index={{language[3].index}}/screening/screening_one">
@@ -121,8 +136,23 @@
                     {{language[5].name}}
                 </a>
             </div>
+        </div>
 
-<!--    </div>-->
+        <div class="langnavbar">
+            <div class="column">
+            </div>
+            <div class="column">
+                <a href="/lang_index={{language[6].index}}/screening/screening_one">
+                    {{language[6].name}}
+                </a>
+            </div>
+        </div>
+    </div>
+    </form>
+</center>
+</body>
+</html>
+
 <!--        <input type="button" id = "bt1" class = "btn" value = "{{language[0].name}}">-->
 <!--        <input type="button" id = "bt2" class = "btn" value = "{{language[1].name}}">-->
 <!--        <input type="button" id = "bt3" class = "btn" value = "{{language[2].name}}"> <br>-->
@@ -130,8 +160,6 @@
 <!--        <input type="button" id = "bt5" class = "btn" value = "{{language[4].name}}">-->
 <!--        <input type="button" id = "bt6" class = "btn" value = "{{language[5].name}}">-->
 <!--    </div>-->
-</center>
-</body>
-</html>
+
 
 
