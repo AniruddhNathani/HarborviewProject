@@ -1,8 +1,5 @@
 from flask import Flask, render_template, request, session
 import model as md
-# from flask_session import Session
-import os
-from pathlib import Path
 from flask_session import Session
 from collections import defaultdict
 
@@ -67,14 +64,6 @@ def final_response(index):
 
 @app.route("/patient-responses")
 def patient_response():
-    # base_path = Path(os.getcwd()+"/flask_session")
-    # list_of_files = {}
-    # for filename in os.listdir(base_path):
-    #     fn = base_path.joinpath(filename)
-    #     print("HELLLLLLLEOO",fn)
-    #     with open(fn) as f:
-    #         f = f.decode()
-    #         list_of_files[filename] = f.read()
     k = str(session["response_list"])
     return render_template("patient_responses.html", response=k)
 
