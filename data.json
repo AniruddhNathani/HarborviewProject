@@ -2,7 +2,7 @@
   {
     "name": "አማርኛ",
     "index": 1,
-    "alert": "You have selected Amheric",
+    "alert": "You have selected Amharic",
     "questions": [
       {
         "question": "Do you have a fever?",
