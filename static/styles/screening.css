@@ -1,0 +1,60 @@
+/* iPad Pro 12.9" - 8 */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+body
+{
+height: 100%;
+overflow: hidden;
+align: center;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 204px 1fr 1fr 1fr 204px;
+grid-template-areas:
+    ". . ."
+    "question question question"
+    "image image image"
+    "box box box"
+    ". . .";
+}
+
+
+img
+{
+grid-area:image;
+}
+
+/* ¿Tiene algún síntoma como tos, resfriado o fiebre? */
+h1
+{
+width: 934px;
+height: 111px;
+grid-area: question;
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 90px;
+text-align: center;
+
+color: #000000;
+}
+
+/* Rectangle 19 */
+button[name="yes_button"]
+{
+width: 501px;
+height: 151px;
+grid-area: box;
+background: #55EFC4;
+}
+
+/* Rectangle 21 */
+button[name="no_button"]
+{
+width: 501px;
+height: 151px;
+grid-area: box;
+background: #FF7675;
+}
+}
