@@ -95,6 +95,8 @@ def back_office(index):
     language = db[index - 1]
     return render_template("back_office.html", language=language)
 
+#Dummy comment
+
 
 if __name__ == "__main__":
     app.run()
