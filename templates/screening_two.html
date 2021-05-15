@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>International Medicine Clinic</title>
+    <link rel = "stylesheet" href = "{{url_for('static', filename='styles/screening.css')}}">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
 <body>
+<div class = "grd">
 <h1 id = "question">{{language.questions[1].question}}</h1>
 {% block images %}{% endblock %}
 <form method="POST" action = "/lang_index={{index}}/screening/final_response">
-    <img src="/static/check_250.png">
+ <img class = "bt_images" src="/static/check_250.png">
     <button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button>
-
-    <img src="/static/cross_250.png">
+     <br>
+     <br>
+    <img class = "bt_images" src="/static/cross_250.png">
     <button type="submit" name="no_button" class = "btn" value = "no">No</button>
 </form>
-<img src="/static/speaker_90.png">
+ <img src="/static/speaker_90.png">
+</div>
 </body>
 </html>
