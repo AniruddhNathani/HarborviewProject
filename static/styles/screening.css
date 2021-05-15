@@ -31,7 +31,6 @@ float: left;
 /* ¿Tiene algún síntoma como tos, resfriado o fiebre? */
 h1
 {
-grid-area: question;
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
@@ -62,3 +61,4 @@ background: #FF7675;
 float: right;
 }
 }
+
