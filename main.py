@@ -74,8 +74,12 @@ def patient_response():
 
     if session["response_list"]:
         response_list = session["response_list"]
+    else:
+        response_list = []
     if session["language"]:
         session_language = session["language"]
+    else:
+        session_language = ''
     return render_template("patient_responses.html", response=response_list, lang=session_language)
 
 
