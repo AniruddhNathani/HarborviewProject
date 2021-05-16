@@ -49,13 +49,41 @@ def screening_two(index):
     return render_template("screening_two.html", language=language, index=index)
 
 
-@app.route("/lang_index=<int:index>/screening/final_response", methods=["GET", "POST"])
-def final_response(index):
+@app.route("/lang_index=<int:index>/screening/screening_three", methods=["GET", "POST"])
+def screening_three(index):
+    db = md.static_load_db()
+    language = db[index-1]
+
     if request.method == "POST":
+        session["language"] = language["alert"]
         if request.form.get("yes_button"):
             session["response_list"]["screen_two"] = "yes"
         elif request.form.get("no_button"):
             session["response_list"]["screen_two"] = "no"
+    return render_template("screening_three.html", language=language, index=index)
+
+
+@app.route("/lang_index=<int:index>/screening/screening_four", methods=["GET", "POST"])
+def screening_four(index):
+    db = md.static_load_db()
+    language = db[index-1]
+
+    if request.method == "POST":
+        session["language"] = language["alert"]
+        if request.form.get("yes_button"):
+            session["response_list"]["screening_three"] = "yes"
+        elif request.form.get("no_button"):
+            session["response_list"]["screening_three"] = "no"
+    return render_template("screening_four.html", language=language, index=index)
+
+
+@app.route("/lang_index=<int:index>/screening/final_response", methods=["GET", "POST"])
+def final_response(index):
+    if request.method == "POST":
+        if request.form.get("yes_button"):
+            session["response_list"]["screen_four"] = "yes"
+        elif request.form.get("no_button"):
+            session["response_list"]["screen_four"] = "no"
 
     for key, value in session["response_list"].items():
         if value == "yes":
@@ -94,8 +122,6 @@ def back_office(index):
     db = md.static_load_db()
     language = db[index - 1]
     return render_template("back_office.html", language=language)
-
-#Dummy comment
 
 
 if __name__ == "__main__":
