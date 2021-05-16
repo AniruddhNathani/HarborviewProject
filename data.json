@@ -1,7 +1,74 @@
 [
   {
-    "name": "አማርኛ",
+    "name": "English",
     "index": 1,
+    "alert_native": "You selected English.",
+    "alert": "You have selected English.",
+    "goodbye": "Thank you for answering these questions.",
+    "interpreter": "I need an interpreter right now.",
+    "help": "I need an interpreter to help me with these questions.",
+    "questions": [
+      {
+        "question": "Have you tested POSITIVE for COVID-19 in the last 2 weeks?",
+        "question_id": 0,
+        "response": [
+          {
+            "text": "Yes",
+            "resp_id": 0
+          },
+          {
+            "text": "No",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "question": "Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?",
+        "question_id": 1,
+        "response": [
+          {
+            "text": "Yes",
+            "resp_id": 0
+          },
+          {
+            "text": "No",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "question": "Have you traveled internationally in the last 14 days?",
+        "question_id": 2,
+        "response": [
+          {
+            "text": "Yes",
+            "resp_id": 0
+          },
+          {
+            "text": "No",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "question": ["Do you have any of these symptoms?", "Cough?",  "Runny nose?", "Fever above 100 degrees?  Chills?", "Sore throat?", "Shortness of breath?", "Nausea? / Vomiting? / Diarrhea?", "New loss of taste or smell?", "Headache? / Muscle pain?"],
+        "question_id": 3,
+        "response": [
+          {
+            "text": "አዎ",
+            "resp_id": 0
+          },
+          {
+            "text": "አልነበረም",
+            "resp_id": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "አማርኛ",
+    "index": 2,
     "alert_native": "አማርኛን መርጠዋል ",
     "alert": "You have selected Amharic.",
     "goodbye": "እነዚህን ጥያቄዎች ስለመለሱልን እናመሰግናለን፡",
@@ -51,7 +118,7 @@
         ]
       },
       {
-        "question": "ከሚከተሉት ምልክቶች ውስጥ አንዱ አለብዎትን? \t ሳል? \t በአፍንጫ የሚንጠባጠብ ንፍጥ? \t ከ100 ድግሪ በላይ የሆነ ትኩሳት? ቅዝቃዜ? \t የጎሮሮ መቁሰል ? \t የትንፋሽ ማጠር? \t  ማጥወልወል? / ማስታወክ? / ተቅማጥ ? \t አዲስ የጣእም እና የማሽተት ስሜት መጥፋት? \t ራስ ምታት? / የጡንቻ ህመም?",
+        "question": ["ከሚከተሉት ምልክቶች ውስጥ አንዱ አለብዎትን?", "ሳል?",  "በአፍንጫ የሚንጠባጠብ ንፍጥ?","ከ100 ድግሪ በላይ የሆነ ትኩሳት? ቅዝቃዜ?", "የጎሮሮ መቁሰል ?", "የትንፋሽ ማጠር?", "ማጥወልወል? / ማስታወክ? / ተቅማጥ ?", "አዲስ የጣእም እና የማሽተት ስሜት መጥፋት?", "ራስ ምታት? / የጡንቻ ህመም?"],
         "question_id": 3,
         "response": [
           {
@@ -68,36 +135,65 @@
   },
   {
     "name": "العربية",
-    "index": 2,
-    "alert": "You have selected Arabic",
-    "goodbye": "እነዚህን ጥያቄዎች ስለመለሱልን እናመሰግናለን፡",
-    "interpreter": "አሁን  አስተርጓሚ እፈልጋለሁ",
-    "help": "ይህንን ጥያቄ በተመለከተ የሚያግዘኝ አስተርጓሚ እፈልጋለሁ",
+    "index": 3,
+    "alert_native": "لقد اخترت العربية",
+    "alert": "You have selected Arabic.",
+    "goodbye": "شكرا لك على الإجابة على هذه الأسئلة.",
+    "interpreter": "أحتاج إلى مترجم فوري الآن.",
+    "help": "أحتاج إلى مترجم لمساعدتي في هذه الأسئلة.ة",
     "questions": [
       {
-        "question": "Do you have a fever?",
+        "question": "           هل كانت نتيجة أختبارك أنت إيجابية لفيروس كوفيد-19 (كورونا) فى الأسبوعين الماضيين؟",
         "question_id": 0,
         "response": [
           {
-            "text": "Yes",
+            "text": "كلا",
             "resp_id": 0
           },
           {
-            "text": "No",
+            "text": "نعم",
             "resp_id": 1
           }
         ]
       },
       {
-        "question": "Do you have runny nose?",
+        "question": "       هل كنت على أتصال بشخص ثبُتت إصابتهِ بفيروس كوفيد- 19(كورونا) فى الأسبوعيين الماضيين؟",
         "question_id": 1,
         "response": [
           {
-            "text": "Yes",
+            "text": "كلا",
             "resp_id": 0
           },
           {
-            "text": "No",
+            "text": "نعم",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "question": "هل سافرت خارج البلد دوليا في 14 يوم السابقة ؟",
+        "question_id": 2,
+        "response": [
+          {
+            "text": "كلا",
+            "resp_id": 0
+          },
+          {
+            "text": "نعم",
+            "resp_id": 1
+          }
+        ]
+      },
+      {
+        "question": ["هل لديك أى من أعراض التالية؟", "كحة؟",  "رشح من الأنف؟", "حمى أعلى من 100 درجة أو قشعريرة؟", "إلتهاب بالحلق؟", "ضيق فى التنفس؟", "غثيان/ قئ/ إسهال؟", "فقدان جديد للطعم أو الرائحة؟", "صداع/ ألم بالعضلات؟"],
+        "question_id": 3,
+        "response": [
+          {
+            "text": "كلا",
+            "resp_id": 0
+          },
+          {
+            "text": "نعم",
             "resp_id": 1
           }
         ]
@@ -106,10 +202,11 @@
   },
   {
     "name": "Afaan Oromoo",
-    "index": 3,
-    "alert": "Afaan Oromoo filatte",
+    "index": 4,
+    "alert_native": "Afaan Oromoo filatte",
+    "alert": "You have selected Oromoo.",
     "goodbye": "Gaaffiwan kana deebisuu keesaniif galatoomaa.",
-    "interpreter": "Nama Afaan hiiku ammaan tana nabarbaachisa",
+    "interpreter": "Nama Afaan hiiku ammaan tana nabarbaachisa.",
     "help": "Gaaffiwan kanaa nama nagargaaru nabarbaachisa.",
     "questions": [
       {
@@ -121,7 +218,7 @@
             "resp_id": 0
           },
           {
-            "text": "Lakkii",
+            "text": "Lakki",
             "resp_id": 1
           }
         ]
@@ -135,7 +232,7 @@
             "resp_id": 0
           },
           {
-            "text": "Lakkii",
+            "text": "Lakki",
             "resp_id": 1
           }
         ]
@@ -149,13 +246,13 @@
             "resp_id": 0
           },
           {
-            "text": "Lakkii",
+            "text": "Lakki",
             "resp_id": 1
           }
         ]
       },
       {
-        "question": "Waan kanaa gadii kun sitti jiraa? Qufaa?",
+        "question": ["Waan kanaa gadii kun sitti jiraa?", "Qufaa?",  "Furrii?","Ho’ina nafaa kan digrii 100 olii? Dhaamochaa?", "Dhukkub kokkee keessa?", "Afuurri sicitaa?", "Lolloca?/didiga?/garaa kaasaa?", "Waa dhandhamuufii urgeeffachuu dadhabdaa?", "Mataa dhukkubii?/Dhukkubbiib qaamaa?"],
         "question_id": 3,
         "response": [
           {
@@ -163,105 +260,7 @@
             "resp_id": 0
           },
           {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Furrii?",
-        "question_id": 4,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Ho’ina nafaa kan digrii 100 olii? Dhaamochaa?",
-        "question_id": 5,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Dhukkub kokkee keessa?",
-        "question_id": 6,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Afuurri sicitaa?",
-        "question_id": 7,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Lolloca?/didiga?/garaa kaasaa?",
-        "question_id": 8,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Waa dhandhamuufii urgeeffachuu dadhabdaa?",
-        "question_id": 9,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Waan kanaa gadii kun sitti jiraa? Mataa dhukkubii?/Dhukkubbiib qaamaa?",
-        "question_id": 10,
-        "response": [
-          {
-            "text": "Eeyyee",
-            "resp_id": 0
-          },
-          {
-            "text": "Lakkii",
+            "text": "Lakki",
             "resp_id": 1
           }
         ]
@@ -270,9 +269,10 @@
   },
   {
     "name": "Somaali",
-    "index": 4,
-    "alert": "Waxaad dooratay Soomaali",
-    "goodbye": "Waad ku mahadsantahay ka jawaabida su'aalahan",
+    "index": 5,
+    "alert_native": "Waxaad dooratay Soomaali",
+    "alert": "You have selected Oromoo.",
+    "goodbye": "Waad ku mahadsantahay ka jawaabida su'aalahan.",
     "interpreter": "Waxaan u baahanahay turjubaan hada.",
     "help": "Waxaan u baahanahay turjubaan iga caawiya su'aalahan.",
     "questions": [
@@ -319,106 +319,8 @@
         ]
       },
       {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Qufac?",
+        "question": ["Ma leedahay mid ka mid ah astaamahan?", "Qufac?",  "Duuf ama biyo sanka kaa socda?","Qandho ka sarreysa 100 digrii?Qarqaryo?", "Cune xanuun?", "Neefta oo kugu yaraata?", "Lallabo? / Matagid? / Shuban?", "Dhadhanka ama urta oo kaa tagtay oo kugu cusub ?", "Madax xanuun? / Muruq xanuun?"],
         "question_id": 3,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Duuf ama biyo sanka kaa socda?",
-        "question_id": 4,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Qandho ka sarreysa 100 digrii? Qarqaryo?",
-        "question_id": 5,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Cune xanuun?",
-        "question_id": 6,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Neefta oo kugu yaraata?",
-        "question_id": 7,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Lallabo? / Matagid? / Shuban?",
-        "question_id": 8,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Dhadhanka ama urta oo kaa tagtay oo kugu cusub ?",
-        "question_id": 9,
-        "response": [
-          {
-            "text": "Haa",
-            "resp_id": 0
-          },
-          {
-            "text": "Maya",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Ma leedahay mid ka mid ah astaamahan? Madax xanuun? / Muruq xanuun?",
-        "question_id": 10,
         "response": [
           {
             "text": "Haa",
@@ -434,8 +336,9 @@
   },
   {
     "name": "中文",
-    "index": 5,
-    "alert": "你选择中文。",
+    "index": 6,
+    "alert_native": "你选择中文。",
+    "alert": "You have selected Chinese.",
     "goodbye": "感谢你回答这些问题。",
     "interpreter": "我现在需要口译员。",
     "help": "我需要口译员来帮我完成这些问题。",
@@ -483,106 +386,8 @@
         ]
       },
       {
-        "question": "你是否有以下这些症状? 咳嗽?",
+        "question": ["你是否有以下这些症状?", "咳嗽?",  "流鼻涕?","发烧100度以上或寒战?", "喉咙?", " 呼吸急促?", "恶心/呕吐/腹泻?", "新近失去味觉或嗅觉?", "头痛/肌肉疼痛?"],
         "question_id": 3,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 流鼻涕?",
-        "question_id": 4,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 发烧100度以上或寒战?",
-        "question_id": 5,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 喉咙?",
-        "question_id": 6,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 呼吸急促?",
-        "question_id": 7,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 恶心/呕吐/腹泻?",
-        "question_id": 8,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 新近失去味觉或嗅觉?",
-        "question_id": 9,
-        "response": [
-          {
-            "text": "是",
-            "resp_id": 0
-          },
-          {
-            "text": "不是",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "你是否有以下这些症状? 头痛/肌肉疼痛?",
-        "question_id": 10,
         "response": [
           {
             "text": "是",
@@ -598,8 +403,9 @@
   },
   {
     "name": "Tiếng Việt",
-    "index": 6,
-    "alert": "Quý vị đã chọn Tiếng Việt",
+    "index": 7,
+    "alert_native": "Quý vị đã chọn Tiếng Việt.",
+    "alert": "You have selected Vietnamese.",
     "goodbye": "Cảm ơn quý vị đã trả lời những câu hỏi này.",
     "interpreter": "Tôi cần thông dịch viên ngay bây giờ.",
     "help": "Tôi cần thông dịch viên giúp tôi với những câu hỏi này.",
@@ -647,106 +453,8 @@
         ]
       },
       {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Ho?",
+        "question": ["Quý vị có triệu chứng nào dưới đây không?", "Ho?",  "Sổ mũi?","Sốt trên 100 độ? Ớn lạnh?", "Đau họng?", "Thở hụt hơi?", "Buồn nôn? / Ói mửa? / Tiêu chảy?", "Mất vị giác hoặc mùi gần đây?", "Nhức đầu? / Đau cơ bắp?"],
         "question_id": 3,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Sổ mũi?",
-        "question_id": 4,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Sốt trên 100 độ? Ớn lạnh?",
-        "question_id": 5,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Đau họng?",
-        "question_id": 6,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Thở hụt hơi?",
-        "question_id": 7,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Buồn nôn? / Ói mửa? / Tiêu chảy?",
-        "question_id": 8,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Mất vị giác hoặc mùi gần đây?",
-        "question_id": 9,
-        "response": [
-          {
-            "text": "Có",
-            "resp_id": 0
-          },
-          {
-            "text": "Không",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "Quý vị có triệu chứng nào dưới đây không? Nhức đầu? / Đau cơ bắp?",
-        "question_id": 10,
         "response": [
           {
             "text": "Có",
@@ -761,9 +469,10 @@
     ]
   },
   {
-    "name" : "Español",
-    "index": 7,
-    "alert": "Ha elegido español",
+    "name": "Español",
+    "index": 8,
+    "alert_native": "Ha elegido español.",
+    "alert": "You have selected Amharic.",
     "goodbye": "Gracias por contestar estas preguntas.",
     "interpreter": "Necesito un intérprete ahora mismo.",
     "help": "Necesito un intérprete que me ayude con estas preguntas.",
@@ -811,106 +520,8 @@
         ]
       },
       {
-        "question": "¿Tiene algunos de estos síntomas? Tos?",
+        "question": ["¿Tiene algunos de estos síntomas?", "Tos?",  "Goteo nasal?", "Fiebre de más de 100 grados Escalofríos?", "Dolor de garganta?", "Dificultad para respirar?", "Náusea / Vómitos / Diarrea?", "Nueva perdida del gusto u olfato?", "Dolor de cabeza /dolor muscular?"],
         "question_id": 3,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Goteo nasal?",
-        "question_id": 4,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Fiebre de más de 100 grados Escalofríos?",
-        "question_id": 5,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Dolor de garganta?",
-        "question_id": 6,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Dificultad para respirar?",
-        "question_id": 7,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Náusea / Vómitos / Diarrea?",
-        "question_id": 8,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Nueva perdida del gusto u olfato?",
-        "question_id": 9,
-        "response": [
-          {
-            "text": "Sí",
-            "resp_id": 0
-          },
-          {
-            "text": "No",
-            "resp_id": 1
-          }
-        ]
-      },
-      {
-        "question": "¿Tiene algunos de estos síntomas? Dolor de cabeza /dolor muscular?",
-        "question_id": 10,
         "response": [
           {
             "text": "Sí",
