@@ -11,3 +11,8 @@ python -m pip install flask
 export FLASK_APP=main.py
 export FLASK_ENV=development
 flask run
+
+# heroku git:remote -a harborview-project
+# git push heroku master
+
+

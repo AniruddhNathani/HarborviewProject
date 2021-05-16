@@ -4,17 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <title>International Medicine Clinic</title>
+  <!--  <link rel = "stylesheet" href = "{{url_for('static', filename='styles/screening.css')}}"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
-<body>
-<h1 id = "question">{{language.questions[1].question}}</h1>
-{% block images %}{% endblock %}
-<form method="POST" action = "/lang_index={{index}}/screening/final_response">
-    <img src="/static/check_250.png">
-    <button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button>
+<style>
 
-    <img src="/static/cross_250.png">
-    <button type="submit" name="no_button" class = "btn" value = "no">No</button>
+h1
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 90px;
+text-align: center;
+height: 111px;
+width: 934px;
+color: #000000;
+}
+    #mg
+    {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    }
+
+    #question_row
+    {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-right: 15%;
+    }
+
+     .bt_images
+     {
+     height: 80px;
+     width: 92px;
+     margin-top: 35px;
+     margin-left: 10px;
+     }
+
+    #icons
+    {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    margin-bottom: 20%;
+    }
+
+    button[name="yes_button"]
+{
+width: 320px;
+height: 151px;
+grid-area: box;
+background: #55EFC4;
+float: right;
+}
+
+/* Rectangle 21 */
+button[name="no_button"]
+{
+width: 320px;
+height: 151px;
+grid-area: box;
+background: #FF7675;
+float: right;
+}
+
+#buttons
+{
+margin-bottom: 18%;
+padding-left: 100px;
+}
+
+.btn
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 80px;
+width: 339px;
+height: 37px;
+}
+
+</style>
+<body>
+<div class="containter">
+    <div class="row" id = "question_row">
+        <div class = "col-sm-1"></div>
+<div class="col-sm-10"> <h1 id = "question">{{language.questions[1].question}}</h1> </div>
+        <div class = "col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class = "col-sm-4"></div>
+        <div class="col-sm-4"><br></div>
+        <div class = "col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class = "col-sm-4"></div>
+        <div class="col-sm-4"><br></div>
+        <div class = "col-sm-4"></div>
+    </div>
+    <div class="row" id = "icons">
+        <div class = "col-sm-4"><img id = "mg" src="/static/Img_1.jpg"></div>
+        <div class="col-sm-4" >
+            <img id = "mg" src="/static/Img_3.jpg">
+        </div>
+        <div class = "col-sm-4"><img id = "mg" src="/static/Img_2.jpg"></div>
+    </div>
+{% block images %}{% endblock %}
+<form method="POST" action = "/lang_index={{index}}/screening/final_response" id = "buttons">
+    <div class="row">
+        <div class = "col-sm-2"></div>
+        <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
+        <div class="col-sm-4"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
+        <div class = "col-sm-4"></div>
+    </div>
+     <br>
+     <br>
+    <div class="row">
+        <div class = "col-sm-2"></div>
+        <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
+        <div class="col-sm-4"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
+        <div class = "col-sm-4"></div>
+    </div>
 </form>
-<img src="/static/speaker_90.png">
+    <div class="row">
+        <div class = "col-sm-11"></div>
+        <div class = "col-sm-1"><img style="height:65px; width:52px;" src="/static/speaker_90.png"></div>
+    </div>
+
+</div>
 </body>
 </html>
