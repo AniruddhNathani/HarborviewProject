@@ -79,6 +79,9 @@ def screening_four(index):
 
 @app.route("/lang_index=<int:index>/screening/final_response", methods=["GET", "POST"])
 def final_response(index):
+    db = md.static_load_db()
+    language = db[index - 1]
+
     if request.method == "POST":
         if request.form.get("yes_button"):
             session["response_list"]["screen_four"] = "yes"
@@ -92,7 +95,7 @@ def final_response(index):
         else:
             session["flag"] = 0
     print(session["response_list"], session["flag"])
-    return render_template("final_response.html")
+    return render_template("final_response.html", language=language)
 
 
 @app.route("/patient-responses")
