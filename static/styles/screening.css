@@ -1,50 +1,47 @@
-/* iPad Pro 12.9" - 8 */
-
-
-body
-{
-height: 100%;
-overflow: auto;
-text-align: center;
-}
-
-.grd
-{
-margin: 10% 25% 0 25%;
-display: grid;
-grid-template-rows: 2fr 2fr 1fr ;
-grid-template-areas:
-    "question question question"
-    "image image image"
-    "box box box";
-}
-
-
-.bt_images
-{
-grid-area: box;
-max-width: 92px;
-max-height: 80px;
-float: left;
-}
-
-/* ¿Tiene algún síntoma como tos, resfriado o fiebre? */
 h1
 {
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 72px;
+font-size: 68px;
 line-height: 90px;
 text-align: center;
-
+height: 111px;
+width: 934px;
 color: #000000;
 }
+    #mg
+    {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    }
 
-/* Rectangle 19 */
-button[name="yes_button"]
+    #question_row
+    {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-right: 15%;
+    }
+
+     .bt_images
+     {
+     height: 80px;
+     width: 92px;
+     margin-top: 35px;
+     }
+
+    #icons
+    {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    margin-bottom: 20%;
+    }
+
+    button[name="yes_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #55EFC4;
@@ -54,11 +51,27 @@ float: right;
 /* Rectangle 21 */
 button[name="no_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #FF7675;
 float: right;
 }
+
+#buttons
+{
+margin-bottom: 18%;
+padding-left: 100px;
 }
 
+.btn
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 80px;
+width: 339px;
+height: 37px;
+margin-right: 80px;
+}
