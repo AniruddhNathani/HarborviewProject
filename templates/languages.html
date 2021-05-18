@@ -65,89 +65,264 @@
             height: auto;
         }
 
+        form {
+            display: inline;
+            align: center;
+            font-family: Encode Sans;
+            font-style: normal;
+            font-weight: normal;
+        }
+
     </style>
     <script>
-        function myFunction() {
 
-        var buttons = document.getElementsByClassName('button')
-        for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function(alert) {
-
-
-        })
-        }
-<!--        var lang = document.getElementById('language_select');-->
-<!--        if (confirm("Press a button!")) {-->
-<!--        txt = "You pressed OK!";-->
-<!--        } else {-->
-<!--        txt = "You pressed Cancel!";-->
-<!--        }-->
-<!--        document.getElementById("demo").innerHTML = txt;-->
-<!--        }-->
-<!--        var myWindow = window.open();-->
     </script>
 </head>
 <body>
 <center>
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         <div class="responsive">
             <img srcset="/static/HarborviewLogo.png">
         </div>
         <h3>Please Select your Language</h3>
-    </div>
-    <form onclick="myFunction()" id="language_select">
-    <div id = "button_layout" class="d-flex justify-content-center align-items-center" style="height:100px;">
-        <div class="langnavbar">
-            <div class="column">
-                <a href="/lang_index={{language[0].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[0].alert}} )">
-                    {{language[0].name}}
-                </a>
-            </div>
-            <div class="column">
-                <a href="/lang_index={{language[1].index}}/screening/screening_one" class = button onclick="myFunction({{language[1].alert}} )">
-                    {{language[1].name}}
-                </a>
-            </div>
-            <div class="column">
-                <a href="/lang_index={{language[2].index}}/screening/screening_one">
-                    {{language[2].name}}
-                </a>
-            </div>
-        </div>
-        <div class="langnavbar">
-            <div class="column">
-                <a href="/lang_index={{language[3].index}}/screening/screening_one">
-                    {{language[3].name}}
-                </a>
-            </div>
-            <div class="column">
-                <a href="/lang_index={{language[4].index}}/screening/screening_one">
-                    {{language[4].name}}
-                </a>
-            </div>
-            <div class="column">
-                <a href="/lang_index={{language[5].index}}/screening/screening_one">
-                    {{language[5].name}}
-                </a>
-            </div>
-        </div>
 
-        <div class="langnavbar">
-            <div class="column">
-                <a href="/lang_index={{language[6].index}}/screening/screening_one">
-                    {{language[6].name}}
-                </a>
+            <div id = "button_layout" class="d-flex justify-content-center align-items-center" style="height:100px;">
+                <div class="langnavbar">
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[0].index}}">
+                            {{language[0].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal1" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[0].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[0].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[0].index)}}" method="post">
+                                    <input type="submit" value="{{language[0].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[1].index}}">
+                            {{language[1].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal2" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[1].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[1].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[1].index)}}" method="post">
+                                    <input type="submit" value="{{language[1].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[2].index}}">
+                            {{language[2].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal3" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[2].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[2].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[2].index)}}" method="post">
+                                    <input type="submit" value="{{language[2].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="langnavbar">
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[3].index}}">
+                            {{language[3].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal4" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[3].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[3].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[3].index)}}" method="post">
+                                    <input type="submit" value="{{language[3].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[4].index}}">
+                            {{language[4].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal5" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[4].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[4].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[4].index)}}" method="post">
+                                    <input type="submit" value="{{language[4].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[5].index}}">
+                            {{language[5].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal6" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[5].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[5].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[5].index)}}" method="post">
+                                    <input type="submit" value="{{language[5].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="langnavbar">
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[6].index}}">
+                            {{language[6].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal7" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[6].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[6].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[6].index)}}" method="post">
+                                    <input type="submit" value="{{language[6].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                        <a href="#" class = "btn" data-toggle="modal" data-target="#myModal{{language[7].index}}">
+                            {{language[7].name}}
+                        </a>
+                        <!-- The Modal -->
+                        <div id="myModal8" class="modal fade">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <!-- Modal content -->
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p>{{language[7].alert_native}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[7].questions[0].response[1].text}}</button>
+                                  <form action="{{url_for('screening_one', index=language[7].index)}}" method="post">
+                                    <input type="submit" value="{{language[7].questions[0].response[0].text}}" class="btn btn-danger">
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-            </div>
-            <div class="column">
-                <a href="/lang_index={{language[7].index}}/screening/screening_one">
-                    {{language[7].name}}
-                </a>
-            </div>
-        </div>
+
     </div>
-    </form>
 </center>
 </body>
 </html>
