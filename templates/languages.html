@@ -73,6 +73,50 @@
             font-weight: normal;
         }
 
+    .modal-content
+    {
+    margin-top: 80%;
+    }
+
+    .modal-body
+    {
+    font-family: Encode Sans;
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        font-size: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .modal-footer
+    {
+    text-align: center;
+    padding: 50px 15px 50px 15px;
+    }
+
+.btn-no, .btn-yes
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 80px;
+width: 250px;
+height: 151px;
+}
+
+.btn-yes
+{
+background: #55EFC4;
+}
+
+.btn-no
+{
+background: #FF7675;
+}
+
+
     </style>
     <script>
 
@@ -107,9 +151,9 @@
                                     <p>{{language[0].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[0].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[0].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[0].index)}}" method="post">
-                                    <input type="submit" value="{{language[0].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[0].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -135,9 +179,9 @@
                                     <p>{{language[1].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[1].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[1].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[1].index)}}" method="post">
-                                    <input type="submit" value="{{language[1].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[1].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -163,9 +207,9 @@
                                     <p>{{language[2].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[2].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[2].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[2].index)}}" method="post">
-                                    <input type="submit" value="{{language[2].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[2].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -193,9 +237,9 @@
                                     <p>{{language[3].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[3].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[3].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[3].index)}}" method="post">
-                                    <input type="submit" value="{{language[3].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[3].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -221,9 +265,9 @@
                                     <p>{{language[4].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[4].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[4].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[4].index)}}" method="post">
-                                    <input type="submit" value="{{language[4].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[4].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -249,9 +293,9 @@
                                     <p>{{language[5].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[5].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[5].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[5].index)}}" method="post">
-                                    <input type="submit" value="{{language[5].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[5].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -280,9 +324,9 @@
                                     <p>{{language[6].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[6].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[6].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[6].index)}}" method="post">
-                                    <input type="submit" value="{{language[6].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[6].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
@@ -310,9 +354,9 @@
                                     <p>{{language[7].alert_native}}</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[7].questions[0].response[1].text}}</button>
+                                  <button type="button" class="btn-no" data-dismiss="modal">{{language[7].questions[0].response[1].text}}</button>
                                   <form action="{{url_for('screening_one', index=language[7].index)}}" method="post">
-                                    <input type="submit" value="{{language[7].questions[0].response[0].text}}" class="btn btn-danger">
+                                    <input type="submit" value="{{language[7].questions[0].response[0].text}}" class="btn-yes">
                                   </form>
                                 </div>
                               </div>
