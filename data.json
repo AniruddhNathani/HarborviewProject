@@ -51,7 +51,7 @@
         ]
       },
       {
-        "question": ["Do you have any of these symptoms?", "Cough?",  "Runny nose?", "Fever above 100 degrees?  Chills?", "Sore throat?", "Shortness of breath?", "Nausea? / Vomiting? / Diarrhea?", "New loss of taste or smell?", "Headache? / Muscle pain?"],
+        "question": ["Do you have any of these symptoms?", "Cough",  "Runny nose", "Fever above 100 degrees or  Chills", "Sore throat", "Shortness of breath", "Nausea/ Vomiting/ Diarrhea", "New loss of taste or smell", "Headache/Muscle pain"],
         "question_id": 3,
         "response": [
           {
