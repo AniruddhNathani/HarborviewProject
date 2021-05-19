@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>International Medicine Clinic</title>
-  <!--  <link rel = "stylesheet" href = "{{url_for('static', filename='styles/screening.css')}}"> -->
+    <!--  <link rel = "stylesheet" href = "{{url_for('static', filename='styles/screening.css')}}"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet">
 </head>
 <style>
 
@@ -40,8 +40,8 @@ color: #000000;
      {
      height: 80px;
      width: 92px;
-     margin-top: 35px;
-     margin-left: 10px;
+     margin-top: 5px;
+     margin-left: 130px;
      }
 
     #icons
@@ -49,12 +49,12 @@ color: #000000;
     margin-left: 10%;
     margin-right: 10%;
     padding-left: 5%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
     }
 
     button[name="yes_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #55EFC4;
@@ -64,7 +64,7 @@ float: right;
 /* Rectangle 21 */
 button[name="no_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #FF7675;
@@ -73,8 +73,8 @@ float: right;
 
 #buttons
 {
-margin-bottom: 18%;
 padding-left: 100px;
+padding-right: 15px;
 }
 
 .btn
@@ -86,7 +86,27 @@ font-size: 48px;
 line-height: 80px;
 width: 339px;
 height: 37px;
+margin-right: 40px;
 }
+
+.symptom
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 45px;
+width: 339px;
+height: 37px;
+}
+
+.listrow
+{
+margin-left: 100px;
+margin-right: 90px;
+padding: 15px;
+}
+
 
 </style>
 <body>
@@ -97,16 +117,67 @@ height: 37px;
         <div class = "col-sm-1"></div>
     </div>
     <div class="row">
-        <div class = "col-sm-4"></div>
-        <div class="col-sm-4"><br></div>
-        <div class = "col-sm-4"></div>
+        <ul class = "listrow">
+        <div class = "col-sm-4">
+            <li class = "symptom">
+            {{language.questions[3].question[1]}}
+        </li>
+        </div>
+        <div class="col-sm-4">
+            <li class = "symptom">
+                {{language.questions[3].question[2]}}
+            </li>
+            <br></div>
+        <div class = "col-sm-4">
+            <li class = "symptom">
+                {{language.questions[3].question[3]}}
+            </li>
+        </div>
+        </ul>
+    </div>
+    <br> <br> <br>
+    <div class="row">
+        <ul class = "listrow">
+            <div class = "col-sm-4">
+                <li class = "symptom">
+                    {{language.questions[3].question[4]}}
+                </li>
+            </div>
+            <div class="col-sm-4">
+                <li class = "symptom">
+                    {{language.questions[3].question[5]}}
+                </li>
+                <br></div>
+            <div class = "col-sm-4">
+                <li class = "symptom">
+                    {{language.questions[3].question[6]}}
+                </li>
+            </div>
+        </ul>
+    </div>
+    <br> <br> <br> <br> <br>
+    <div class="row">
+        <ul class = "listrow">
+            <div class = "col-sm-4">
+                <li class = "symptom">
+                    {{language.questions[3].question[7]}}
+                </li>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class = "col-sm-4">
+                <li class = "symptom">
+                    {{language.questions[3].question[8]}}
+                </li>
+            </div>
+        </ul>
     </div>
     <div class="row">
         <div class = "col-sm-4"></div>
         <div class="col-sm-4"><br></div>
         <div class = "col-sm-4"></div>
     </div>
-    <div class="row" id = "icons">
+    <br> <Br> <Br> <br>
+  <div class="row" id = "icons">
         <div class = "col-sm-4"><img id = "mg" src="/static/Img_1.jpg"></div>
         <div class="col-sm-4" >
             <img id = "mg" src="/static/Img_3.jpg">
@@ -116,18 +187,13 @@ height: 37px;
 {% block images %}{% endblock %}
 <form method="POST" action = "/lang_index={{index}}/screening/final_response" id = "buttons">
     <div class="row">
-        <div class = "col-sm-2"></div>
-        <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
-        <div class="col-sm-4"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
-        <div class = "col-sm-4"></div>
+        <div class="col-sm-6"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
+        <div class="col-sm-6"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
     </div>
      <br>
-     <br>
     <div class="row">
-        <div class = "col-sm-2"></div>
-        <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
-        <div class="col-sm-4"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
-        <div class = "col-sm-4"></div>
+        <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
+        <div class = "col-sm-6"><img class = "bt_images" src="/static/cross_250.png"></div>
     </div>
 </form>
     <div class="row">
