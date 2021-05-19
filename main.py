@@ -15,15 +15,17 @@ global session_language
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
+    session.clear()
+    session["response_list"] = dict(defaultdict())
+    session["flag"] = 0
+    session["language"] = ''
+
     return render_template("welcome.html")
 
 
 @app.route("/languages", methods=["GET", "POST"])
 def languages():
-    session.clear()
-    session["response_list"] = dict(defaultdict())
-    session["flag"] = 0
-    session["language"] = ''
+
     db = md.static_load_db()
     return render_template("languages.html", language=db)
 
