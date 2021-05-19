@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Medicine Clinic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1 {
+        font-family: Encode Sans;
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        font-size: 40px;
+        }
+
+        h3 {
+        font-family: Encode Sans;
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        font-size: 30px;
+        }
+
+a
+{
+text-decoration: none;
+color: inherit;
+}
+
+.btn
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 80px;
+width: 300px;
+height: 151px;
+}
+
+#txt
+{
+margin-left: 8px;
+}
+
+#mg
+{
+width: 480px;
+height: 420px;
+}
+
+#logo
+{
+padding-right: 10px;
+padding-left: 0px;
+}
+
+</style>
+
+<body>
+<div class = "container">
+    <div class="row">
+        <div class = "col-sm-3"></div>
+        <div class="col-sm-6" id = "logo">
+            <img id = "mg" src="/static/HarborviewLogo.png">
+        </div>
+        <div class = "col-sm-3"></div>
+    </div>
+    <div class="row">
+        <div class = "col-sm-4"></div>
+        <div class="col-sm-4"><br></div>
+        <div class = "col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class = "col-sm-2"></div>
+        <div class="col-sm-8" id = "txt"><br>
+            <h1>Please Select your language</h1>
+        </div>
+        <div class = "col-sm-2"></div>
+    </div>
+    <div class="row">
+        <div class = "col-sm-4"></div>
+        <div class="col-sm-4"><br></div>
+        <div class = "col-sm-4"></div>
+    </div>
+    <br> <br> <br>
+    <div class="row">
+        <div class="col-sm-4">
+                <a href="/lang_index={{language[0].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[0].alert}} )">
+                    <button type="submit" name="langbt"  value = "1" class = "btn">{{language[0].name}}</button>
+                </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[1].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[1].alert}} )">
+                <button type="submit" name="langbt"  value = "2" class = "btn">{{language[1].name}}</button>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[2].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[2].alert}} )">
+                <button type="submit" name="langbt"  value = "2" class = "btn">{{language[2].name}}</button>
+            </a>
+        </div>
+    </div>
+    <br> <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[3].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[3].alert}} )">
+                <button type="submit" name="langbt"  value = "1" class = "btn">{{language[3].name}}</button>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[4].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[4].alert}} )">
+                <button type="submit" name="langbt"  value = "2" class = "btn">{{language[4].name}}</button>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[5].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[5].alert}} )">
+                <button type="submit" name="langbt"  value = "2" class = "btn">{{language[5].name}}</button>
+            </a>
+        </div>
+    </div>
+    <br> <br>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[6].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[6].alert}} )">
+                <button type="submit" name="langbt"  value = "1" class = "btn">{{language[6].name}}</button>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/lang_index={{language[7].index}}/screening/screening_one" class = "button" onclick="myFunction({{language[7].alert}} )">
+                <button type="submit" name="langbt"  value = "2" class = "btn">{{language[7].name}}</button>
+            </a>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
