@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <title>International Medicine Clinic</title>
 </head>
+
+<style>
+
+h1
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 90px;
+text-align: center;
+height: 111px;
+width: 934px;
+color: #000000;
+margin: 20% 0 0 2%;
+}
+
+
+body
+{
+text-align: center;
+}
+
+#container
+{
+margin-top: 10%;
+}
+
+</style>
 <body>
-    <h1>Video for {{language.name}}</h1>
-    <iframe src="{{language.vid_url}}"></iframe>
+<h1>Video for {{language.name}}</h1>
+<div id = "container">
+    <iframe width="800" height="515" src="https://www.youtube.com/embed/n6J-c1poOtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 </body>
 </html>
