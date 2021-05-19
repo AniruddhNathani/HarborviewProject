@@ -118,7 +118,7 @@
         ]
       },
       {
-        "question": ["ከሚከተሉት ምልክቶች ውስጥ አንዱ አለብዎትን?", "ሳል?",  "በአፍንጫ የሚንጠባጠብ ንፍጥ?","ከ100 ድግሪ በላይ የሆነ ትኩሳት? ቅዝቃዜ?", "የጎሮሮ መቁሰል ?", "የትንፋሽ ማጠር?", "ማጥወልወል? / ማስታወክ? / ተቅማጥ ?", "አዲስ የጣእም እና የማሽተት ስሜት መጥፋት?", "ራስ ምታት? / የጡንቻ ህመም?"],
+        "question": ["ከሚከተሉት ምልክቶች ውስጥ አንዱ አለብዎትን?", "ሳል",  "በአፍንጫ የሚንጠባጠብ ንፍጥ","ከ100 ድግሪ በላይ የሆነ ትኩሳት? ቅዝቃዜ", "የጎሮሮ መቁሰል", "የትንፋሽ ማጠር", "ማጥወልወል/ ማስታወክ/ ተቅማጥ", "አዲስ የጣእም እና የማሽተት ስሜት መጥፋት", "ራስ ምታት/የጡንቻ ህመም"],
         "question_id": 3,
         "response": [
           {
@@ -252,7 +252,7 @@
         ]
       },
       {
-        "question": ["Waan kanaa gadii kun sitti jiraa?", "Qufaa?",  "Furrii?","Ho’ina nafaa kan digrii 100 olii? Dhaamochaa?", "Dhukkub kokkee keessa?", "Afuurri sicitaa?", "Lolloca?/didiga?/garaa kaasaa?", "Waa dhandhamuufii urgeeffachuu dadhabdaa?", "Mataa dhukkubii?/Dhukkubbiib qaamaa?"],
+        "question": ["Waan kanaa gadii kun sitti jiraa?", "Qufaa",  "Furrii","Ho’ina nafaa kan digrii 100 olii? Dhaamochaa?", "Dhukkub kokkee keessa", "Afuurri sicitaa", "Lolloca/ didiga/ garaa kaasaa", "Waa dhandhamuufii urgeeffachuu dadhabdaa", "Mataa dhukkubii/Dhukkubbiib qaamaa"],
         "question_id": 3,
         "response": [
           {
@@ -319,7 +319,7 @@
         ]
       },
       {
-        "question": ["Ma leedahay mid ka mid ah astaamahan?", "Qufac?",  "Duuf ama biyo sanka kaa socda?","Qandho ka sarreysa 100 digrii?Qarqaryo?", "Cune xanuun?", "Neefta oo kugu yaraata?", "Lallabo? / Matagid? / Shuban?", "Dhadhanka ama urta oo kaa tagtay oo kugu cusub ?", "Madax xanuun? / Muruq xanuun?"],
+        "question": ["Ma leedahay mid ka mid ah astaamahan?", "Qufac",  "Duuf ama biyo sanka kaa socda","Qandho ka sarreysa 100 digrii?Qarqaryo?", "Cune xanuun", "Neefta oo kugu yaraata", "Lallabo/ Matagid/ Shuban", "Dhadhanka ama urta oo kaa tagtay oo kugu cusub", "Madax xanuun/ Muruq xanuun"],
         "question_id": 3,
         "response": [
           {
@@ -386,7 +386,7 @@
         ]
       },
       {
-        "question": ["你是否有以下这些症状?", "咳嗽?",  "流鼻涕?","发烧100度以上或寒战?", "喉咙?", " 呼吸急促?", "恶心/呕吐/腹泻?", "新近失去味觉或嗅觉?", "头痛/肌肉疼痛?"],
+        "question": ["你是否有以下这些症状?", "咳嗽",  "流鼻涕","发烧100度以上或寒战", "喉咙", " 呼吸急促", "恶心/呕吐/腹泻", "新近失去味觉或嗅觉", "头痛/肌肉疼痛"],
         "question_id": 3,
         "response": [
           {
@@ -453,7 +453,7 @@
         ]
       },
       {
-        "question": ["Quý vị có triệu chứng nào dưới đây không?", "Ho?",  "Sổ mũi?","Sốt trên 100 độ? Ớn lạnh?", "Đau họng?", "Thở hụt hơi?", "Buồn nôn? / Ói mửa? / Tiêu chảy?", "Mất vị giác hoặc mùi gần đây?", "Nhức đầu? / Đau cơ bắp?"],
+        "question": ["Quý vị có triệu chứng nào dưới đây không?", "Ho",  "Sổ mũi?","Sốt trên 100 độ? Ớn lạnh?", "Đau họng", "Thở hụt hơi", "Buồn nôn/ Ói mửa/ Tiêu chảy", "Mất vị giác hoặc mùi gần đây", "Nhức đầu/ Đau cơ bắp"],
         "question_id": 3,
         "response": [
           {
@@ -520,7 +520,7 @@
         ]
       },
       {
-        "question": ["¿Tiene algunos de estos síntomas?", "Tos?",  "Goteo nasal?", "Fiebre de más de 100 grados Escalofríos?", "Dolor de garganta?", "Dificultad para respirar?", "Náusea / Vómitos / Diarrea?", "Nueva perdida del gusto u olfato?", "Dolor de cabeza /dolor muscular?"],
+        "question": ["¿Tiene algunos de estos síntomas?", "Tos",  "Goteo nasal", "Fiebre de más de 100 grados Escalofríos", "Dolor de garganta", "Dificultad para respirar", "Náusea/ Vómitos/ Diarrea", "Nueva perdida del gusto u olfato", "Dolor de cabeza/dolor muscular"],
         "question_id": 3,
         "response": [
           {
