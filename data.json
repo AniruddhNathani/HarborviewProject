@@ -1,6 +1,7 @@
 [
   {
     "name": "English",
+    "trns_name": "English",
     "index": 1,
     "alert_native": "You selected English.",
     "alert": "You have selected English.",
@@ -68,6 +69,7 @@
   },
   {
     "name": "አማርኛ",
+    "trns_name": "Amharic",
     "index": 2,
     "alert_native": "አማርኛን መርጠዋል ",
     "alert": "You have selected Amharic.",
@@ -135,6 +137,7 @@
   },
   {
     "name": "العربية",
+    "trns_name": "Arabic",
     "index": 3,
     "alert_native": "لقد اخترت العربية",
     "alert": "You have selected Arabic.",
@@ -202,6 +205,7 @@
   },
   {
     "name": "Afaan Oromoo",
+    "trns_name": "Oromo",
     "index": 4,
     "alert_native": "Afaan Oromoo filatte",
     "alert": "You have selected Oromoo.",
@@ -269,6 +273,7 @@
   },
   {
     "name": "Somaali",
+    "trns_name": "Somali",
     "index": 5,
     "alert_native": "Waxaad dooratay Soomaali",
     "alert": "You have selected Somaali.",
@@ -336,6 +341,7 @@
   },
   {
     "name": "中文",
+    "trns_name": "Cantonese",
     "index": 6,
     "alert_native": "你选择中文。",
     "alert": "You have selected Chinese.",
@@ -403,6 +409,7 @@
   },
   {
     "name": "Tiếng Việt",
+    "trns_name": "Vietnamese",
     "index": 7,
     "alert_native": "Quý vị đã chọn Tiếng Việt.",
     "alert": "You have selected Vietnamese.",
@@ -470,6 +477,7 @@
   },
   {
     "name": "Español",
+    "trns_name": "Spanish",
     "index": 8,
     "alert_native": "Ha elegido español.",
     "alert": "You have selected Spanish.",

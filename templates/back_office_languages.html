@@ -80,6 +80,63 @@
 
     </style>
     <script>
+    $(document).ready(function() {
+        $('#myModal1').on('shown.bs.modal', function() {
+            $('#audio1')[0].play();
+        })
+        $('#myModal1').on('hidden.bs.modal', function() {
+            $('#audio1')[0].pause();
+        })
+
+        $('#myModal2').on('shown.bs.modal', function() {
+            $('#audio2')[0].play();
+        })
+        $('#myModal2').on('hidden.bs.modal', function() {
+            $('#audio2')[0].pause();
+        })
+
+        $('#myModal3').on('shown.bs.modal', function() {
+            $('#audio3')[0].play();
+        })
+        $('#myModal3').on('hidden.bs.modal', function() {
+            $('#audio3')[0].pause();
+        })
+
+        $('#myModal4').on('shown.bs.modal', function() {
+            $('#audio4')[0].play();
+        })
+        $('#myModal4').on('hidden.bs.modal', function() {
+            $('#audio4')[0].pause();
+        })
+
+        $('#myModal5').on('shown.bs.modal', function() {
+            $('#audio5')[0].play();
+        })
+        $('#myModal5').on('hidden.bs.modal', function() {
+            $('#audio5')[0].pause();
+        })
+
+        $('#myModal6').on('shown.bs.modal', function() {
+            $('#audio6')[0].play();
+        })
+        $('#myModal6').on('hidden.bs.modal', function() {
+            $('#audio6')[0].pause();
+        })
+
+        $('#myModal7').on('shown.bs.modal', function() {
+            $('#audio7')[0].play();
+        })
+        $('#myModal7').on('hidden.bs.modal', function() {
+            $('#audio7')[0].pause();
+        })
+
+        $('#myModal8').on('shown.bs.modal', function() {
+            $('#audio8')[0].play();
+        })
+        $('#myModal8').on('hidden.bs.modal', function() {
+            $('#audio8')[0].pause();
+        })
+    });
 
     </script>
 </head>
@@ -110,6 +167,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[0].alert_native}}</p>
+                                    <audio id="audio1">
+                                        <source src="{{ url_for('static', filename='1/'+language[0].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[0].questions[0].response[1].text}}</button>
@@ -138,6 +198,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[1].alert_native}}</p>
+                                    <audio id="audio2">
+                                        <source src="{{ url_for('static', filename='2/'+language[1].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[1].questions[0].response[1].text}}</button>
@@ -166,6 +229,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[2].alert_native}}</p>
+                                    <audio id="audio3">
+                                        <source src="{{ url_for('static', filename='3/'+language[2].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[2].questions[0].response[1].text}}</button>
@@ -196,6 +262,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[3].alert_native}}</p>
+                                    <audio id="audio4">
+                                        <source src="{{ url_for('static', filename='4/'+language[3].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[3].questions[0].response[1].text}}</button>
@@ -224,6 +293,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[4].alert_native}}</p>
+                                    <audio id="audio5">
+                                        <source src="{{ url_for('static', filename='5/'+language[4].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[4].questions[0].response[1].text}}</button>
@@ -252,6 +324,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[5].alert_native}}</p>
+                                    <audio id="audio6">
+                                        <source src="{{ url_for('static', filename='6/'+language[5].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[5].questions[0].response[1].text}}</button>
@@ -283,6 +358,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[6].alert_native}}</p>
+                                    <audio id="audio7">
+                                        <source src="{{ url_for('static', filename='7/'+language[6].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[6].questions[0].response[1].text}}</button>
@@ -313,6 +391,9 @@
 
                                 <div class="modal-body">
                                     <p>{{language[7].alert_native}}</p>
+                                    <audio id="audio8">
+                                        <source src="{{ url_for('static', filename='8/'+language[7].trns_name+' 1.m4a') }}" type="audio/mp4">
+                                    </audio>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">{{language[7].questions[0].response[1].text}}</button>
