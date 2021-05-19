@@ -16,8 +16,8 @@ h1
 font-family: 'Encode Sans', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 72px;
-line-height: 90px;
+font-size: 50px;
+line-height: 80px;
 text-align: center;
 height: 111px;
 width: 934px;
@@ -25,15 +25,14 @@ color: #000000;
 }
     #mg
     {
-    height: 200px;
-    width: 200px;
-    margin: auto;
+    height: 520px;
+    width: 750px;
     }
 
     #question_row
     {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     padding-right: 15%;
     }
 
@@ -42,20 +41,16 @@ color: #000000;
      height: 80px;
      width: 92px;
      margin-top: 35px;
-     margin-left: 10px;
      }
 
     #icons
     {
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 5%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
     }
 
     button[name="yes_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #55EFC4;
@@ -65,7 +60,7 @@ float: right;
 /* Rectangle 21 */
 button[name="no_button"]
 {
-width: 320px;
+width: 420px;
 height: 151px;
 grid-area: box;
 background: #FF7675;
@@ -74,7 +69,6 @@ float: right;
 
 #buttons
 {
-margin-bottom: 18%;
 padding-left: 100px;
 padding-right: 15px;
 }
@@ -88,54 +82,42 @@ font-size: 48px;
 line-height: 80px;
 width: 339px;
 height: 37px;
+margin-right: 80px;
 }
+
 
 </style>
 <body>
 <div class="containter">
     <div class="row" id = "question_row">
         <div class = "col-sm-1"></div>
-<div class="col-sm-10"> <h1 id = "question">{{language.questions[2].question}}</h1> </div>
+        <div class="col-sm-10"> <h1 id = "question">{{language.questions[2].question}}</h1> </div>
         <div class = "col-sm-1"></div>
     </div>
-    <div class="row">
-        <div class = "col-sm-4"></div>
-        <div class="col-sm-4"><br></div>
-        <div class = "col-sm-4"></div>
-    </div>
-    <div class="row">
-        <div class = "col-sm-4"></div>
-        <div class="col-sm-4"><br></div>
-        <div class = "col-sm-4"></div>
-    </div>
     <div class="row" id = "icons">
-        <div class = "col-sm-4"><img id = "mg" src="/static/Img_1.jpg"></div>
-        <div class="col-sm-4" >
-            <img id = "mg" src="/static/Img_3.jpg">
+        <div class = "col-sm-2"></div>
+        <div class="col-sm-6" >
+            <img id = "mg" src="/static/travel.jpg">
         </div>
-        <div class = "col-sm-4"><img id = "mg" src="/static/Img_2.jpg"></div>
+        <div class = "col-sm-4"></div>
     </div>
 {% block images %}{% endblock %}
-<form method="POST" action = "/lang_index={{index}}/screening/screening_four" id = "buttons">
-    <div class="row">
-        <div class = "col-sm-2"></div>
-        <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
-        <div class="col-sm-4"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
-        <div class = "col-sm-4"></div>
-    </div>
-     <br>
-     <br>
-    <div class="row">
-        <div class = "col-sm-2"></div>
-        <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
-        <div class="col-sm-4"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
-        <div class = "col-sm-4"></div>
-    </div>
-</form>
-    <div class="row">
-        <div class = "col-sm-11"></div>
-        <div class = "col-sm-1"><img style="height:65px; width:52px;" src="/static/speaker_90.png"></div>
-    </div>
+    <form method="POST" action = "/lang_index={{index}}/screening/screening_four" id = "buttons">
+        <div class="row">
+            <div class = "col-sm-2"></div>
+            <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
+            <div class="col-sm-6"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
+            <div class = "col-sm-2"></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class = "col-sm-2"></div>
+            <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
+            <div class="col-sm-6"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
+            <div class = "col-sm-2"></div>
+        </div>
+    </form>
 
 </div>
 </body>
