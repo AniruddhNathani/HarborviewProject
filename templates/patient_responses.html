@@ -13,6 +13,20 @@
     <style>
 
         /* Style the navigation bar links a */
+        .langnavbar a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 10px 30px;
+          margin: 5px 5px;
+          text-decoration: none;
+          background-color: lightgray;
+          height: 20%;
+          font-size: 20px;
+          font-family: Encode Sans;
+          font-style: normal;
+          font-weight: normal;
+        }
         .navbar a {
           display: block;
           color: black;
@@ -47,7 +61,7 @@
             width: 420px;
             height: 151px;
             grid-area: box;
-            background-color: #55EFC430;
+            background-color: #FF767529;
             float: right;
         }
 
@@ -57,7 +71,7 @@
             width: 420px;
             height: 151px;
             grid-area: box;
-            background-color: #FF767529;
+            background-color:#55EFC430 ;
             float: right;
         }
 
@@ -85,17 +99,19 @@
 
 <div class="d-flex justify-content-center align-items-center" style="height:100px;">
     <div class="row">
-        <div class="navbar">
-            <a href={{ url_for('welcome') }}>
-                Home
-            </a>
+        <div class="column">
+            <div class="navbar">
+                <a href={{ url_for('welcome') }}>
+                    Home
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="navbar">
-            <a href={{ url_for('patient_response') }}>
-                Refresh
-            </a>
+        <div class="column">
+            <div class="navbar">
+                <a href={{ url_for('patient_response') }}>
+                    Refresh
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -104,16 +120,17 @@
     {{ text[0]|upper}}{{text[1:] }}
 {% endmacro %}
 
-    <h1>The patient has provided the following responses</h1>
-#For the receptionist, they always see the question in English, so make sure you pass language[0].question to the variable questions here.
-#response must be a list containing the responses for each question, as 1 (Yes) or 0 (No) regardless of patient response language.
+<div class="container d-flex justify-content-center">
+    <center><h1>The patient has provided the following responses in {{lang}} language</h1></center>
+<!--#For the receptionist, they always see the question in English, so make sure you pass language[0].question to the variable questions here.-->
+<!--#response must be a list containing the responses for each question, as 1 (Yes) or 0 (No) regardless of patient response language.-->
+<br><br>
 
-<h1>{{lang}}</h1>
-
-<div class="row" id="buttons">
+<div class="d-flex flex-column">
+<div class="row" id="button1">
     {% if response.screen_one %}
     <div class="col-sm-6" style="font-size:48px; vertical-align: middle;">
-        <h2>Have you tested POSITIVE for COVID-19 in the last 2 weeks?</h2>
+        <h2 style="text-align:left">Have you tested POSITIVE for COVID-19 in the last 2 weeks?</h2>
     </div>
     <div class="col-sm-6">
         {% if response.screen_one == 'no' %}
@@ -126,11 +143,11 @@
     </div>
     {% endif %}
 </div>
-
-<div class="row">
+<br><br>
+<div class="row" id="button2">
     {% if response.screen_two %}
     <div class="col-sm-6" style="font-size:48px; vertical-align: middle;">
-        <h2>Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?</h2>
+        <h2 style="text-align:left">Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?</h2>
     </div>
     <div class="col-sm-6">
         {% if response.screen_two == 'no' %}
@@ -142,11 +159,11 @@
     </div>
     {% endif %}
 </div>
-
-<div class="row">
+<br><br>
+<div class="row" id="button3">
     {% if response.screen_three %}
     <div class="col-sm-6" style="font-size:48px; vertical-align: middle;">
-        <h2>Have you traveled internationally in the last 14 days?</h2>
+        <h2 style="text-align:left">Have you traveled internationally in the last 14 days?</h2>
     </div>
     <div class="col-sm-6">
         {% if response.screen_three == 'no' %}
@@ -158,11 +175,11 @@
     </div>
     {% endif %}
 </div>
-
-<div class="row">
+<br>
+<div class="row" id="button4">
     {% if response.screen_four %}
     <div class="col-sm-6" style="font-size:48px; vertical-align: middle;">
-        <h2>Do you have any of these symptoms?: Cough, Runny nose, Fever above 100 degrees or  Chills, Sore throat, Shortness of breath, Nausea/ Vomiting/ Diarrhea, New loss of taste or smell, Headache/Muscle pain</h2>
+        <h2 style="text-align:left">Do you have any of these symptoms?: Cough, Runny nose, Fever above 100 degrees or  Chills, Sore throat, Shortness of breath, Nausea/ Vomiting/ Diarrhea, New loss of taste or smell, Headache/Muscle pain</h2>
     </div>
     <div class="col-sm-6">
         {% if response.screen_four == 'no' %}
@@ -175,9 +192,14 @@
     {% endif %}
 </div>
 
-{% block images %}{% endblock %}
-<img src="/static/alert.png">
-
+    <center>
+<!--        {% block images %}{% endblock %}-->
+    {% if session_flag == 1 %}
+            <img src="/static/alert.png">
+        <div style="font-size:48px; vertical-align: middle;">Room the Patient Immediately</div>
+    {% endif%}
+    </center>
+</div>
 </body>
 </html>
 

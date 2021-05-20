@@ -91,11 +91,12 @@ def final_response(index):
             session["response_list"]["screen_four"] = "no"
 
     for key, value in session["response_list"].items():
-        if value == "yes":
-            session["flag"] = 1
-            break
-        else:
-            session["flag"] = 0
+        if key in ["screen_one", "screen_four"]:
+            if value == "yes":
+                session["flag"] = 1
+                break
+            else:
+                session["flag"] = 0
     print(session["response_list"], session["flag"])
     return render_template("final_response.html", language=language)
 
@@ -113,7 +114,7 @@ def patient_response():
         session_language = session["language"]
     else:
         session_language = ''
-    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language)
+    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language, session_flag=session["flag"])
 
 
 @app.route("/back-office-languages", methods=["GET", "POST"])
