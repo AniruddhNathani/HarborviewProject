@@ -15,7 +15,7 @@ global session_language
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
-    session.clear()
+    # session.clear()
     session["response_list"] = dict(defaultdict())
     session["flag"] = 0
     session["language"] = ''
