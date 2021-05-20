@@ -9,13 +9,13 @@ SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
 app.secret_key = 'BAD_SECRET_KEY'
-global response_list
-global session_language
+# global response_list
+# global session_language
 
 
 @app.route("/", methods=["GET", "POST"])
 def welcome():
-    # session.clear()
+    session.clear()
     session["response_list"] = dict(defaultdict())
     session["flag"] = 0
     session["language"] = ''
@@ -97,24 +97,37 @@ def final_response(index):
                 break
             else:
                 session["flag"] = 0
-    print(session["response_list"], session["flag"])
+
+    response_dict = {"response_list": session["response_list"], "flag": session["flag"], "language": session["language"]}
+    response_file = open("response_store.json", "w", encoding='utf-8')
+    json.dump(response_dict, response_file)
+    response_file.close()
     return render_template("final_response.html", language=language)
 
 
 @app.route("/patient-responses")
 def patient_response():
-    global response_list
-    global session_language
 
-    if session["response_list"]:
-        response_list = session["response_list"]
+    response_file = open("response_store.json", "r", encoding='utf-8')
+    response_dict = json.load(response_file)
+
+    if response_dict["response_list"]:
+        response_list = response_dict["response_list"]
     else:
         response_list = []
-    if session["language"]:
-        session_language = session["language"]
+
+    if response_dict["language"]:
+        session_flag = response_dict["flag"]
+    else:
+        session_flag = 0
+
+    if response_dict["language"]:
+        session_language = response_dict["language"]
     else:
         session_language = ''
-    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language, session_flag=session["flag"])
+
+    response_file.close()
+    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language, session_flag=session_flag)
 
 
 @app.route("/back-office-languages", methods=["GET", "POST"])
