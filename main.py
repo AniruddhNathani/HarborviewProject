@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, json
 import model as md
 from flask_session import Session
 from collections import defaultdict
@@ -43,7 +43,7 @@ def screening_two(index):
     language = db[index-1]
 
     if request.method == "POST":
-        session["language"] = language["alert"]
+        session["language"] = language["trns_name"]
         if request.form.get("yes_button"):
             session["response_list"]["screen_one"] = "yes"
         elif request.form.get("no_button"):
@@ -57,7 +57,7 @@ def screening_three(index):
     language = db[index-1]
 
     if request.method == "POST":
-        session["language"] = language["alert"]
+        session["language"] = language["trns_name"]
         if request.form.get("yes_button"):
             session["response_list"]["screen_two"] = "yes"
         elif request.form.get("no_button"):
@@ -71,11 +71,11 @@ def screening_four(index):
     language = db[index-1]
 
     if request.method == "POST":
-        session["language"] = language["alert"]
+        session["language"] = language["trns_name"]
         if request.form.get("yes_button"):
-            session["response_list"]["screening_three"] = "yes"
+            session["response_list"]["screen_three"] = "yes"
         elif request.form.get("no_button"):
-            session["response_list"]["screening_three"] = "no"
+            session["response_list"]["screen_three"] = "no"
     return render_template("screening_four.html", language=language, index=index)
 
 
@@ -113,7 +113,7 @@ def patient_response():
         session_language = session["language"]
     else:
         session_language = ''
-    return render_template("patient_responses.html", response=response_list, lang=session_language)
+    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language)
 
 
 @app.route("/back-office-languages", methods=["GET", "POST"])
