@@ -73,18 +73,28 @@ padding-left: 100px;
 padding-right: 15px;
 }
 
-.btn
+.btn-no, .btn-yes
 {
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 48px;
+font-size: 40px;
 line-height: 80px;
-width: 339px;
-height: 37px;
-margin-right: 80px;
+width: 250px;
+height: 151px;
 }
 
+.btn-yes
+{
+background: #55EFC4;
+margin: 10px;
+}
+
+.btn-no
+{
+background: #FF7675;
+margin: 10px;
+}
 
 </style>
 <body>
@@ -106,7 +116,7 @@ margin-right: 80px;
         <div class="row">
             <div class = "col-sm-2"></div>
             <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
-            <div class="col-sm-6"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
+            <div class="col-sm-6"><button type="submit" name="yes_button" class="btn-yes" value="yes">{{language.questions[0].response[0].text}}</button></div>
             <div class = "col-sm-2"></div>
         </div>
         <br>
@@ -114,7 +124,7 @@ margin-right: 80px;
         <div class="row">
             <div class = "col-sm-2"></div>
             <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
-            <div class="col-sm-6"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
+            <div class="col-sm-6"><button type="submit" name="no_button" class="btn-no" value="no">{{language.questions[0].response[1].text}}</button></div>
             <div class = "col-sm-2"></div>
         </div>
     </form>
