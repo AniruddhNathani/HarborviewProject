@@ -80,6 +80,9 @@
         <img srcset="/static/HarborviewLogo.png">
     </div>
     <h1>{{language.goodbye}}</h1>
+    <audio autoplay>
+        <source src="{{ url_for('static', filename=language.index ~ '/' ~ language.trns_name ~ ' 6.m4a') }}" type="audio/mp4">
+    </audio>
 </div>
 </center>
 </body>
