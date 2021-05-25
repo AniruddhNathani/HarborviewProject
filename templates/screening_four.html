@@ -31,16 +31,16 @@ color: #000000;
 
     #question_row
     {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding-right: 15%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-right: 50%;
     }
 
      .bt_images
      {
      height: 80px;
      width: 92px;
-     margin-top: 5px;
+     margin-top: -10px;
      margin-left: 130px;
      }
 
@@ -73,8 +73,8 @@ float: right;
 
 #buttons
 {
-padding-left: 100px;
-padding-right: 15px;
+padding-left: 70px;
+padding-right: 50px;
 }
 
 .btn
@@ -105,6 +105,7 @@ height: 37px;
 margin-left: 100px;
 margin-right: 90px;
 padding: 15px;
+margin-bottm: 10px;
 }
 
 .btn-no, .btn-yes
@@ -116,6 +117,7 @@ font-size: 40px;
 line-height: 80px;
 width: 250px;
 height: 151px;
+border-radius: 15px;
 }
 
 .btn-yes
@@ -156,7 +158,7 @@ margin: 10px;
         </div>
         </ul>
     </div>
-    <br> <br> <br>
+    <br> <br> <br> <br> <br> <br>
     <div class="row">
         <ul class = "listrow">
             <div class = "col-sm-4">
@@ -176,28 +178,22 @@ margin: 10px;
             </div>
         </ul>
     </div>
-    <br> <br> <br> <br> <br>
+    <br> <br> <br> <br>
     <div class="row">
         <ul class = "listrow">
-            <div class = "col-sm-4">
+            <div class = "col-sm-6">
                 <li class = "symptom">
                     {{language.questions[3].question[7]}}
                 </li>
             </div>
-            <div class="col-sm-4"></div>
-            <div class = "col-sm-4">
+            <div class = "col-sm-6">
                 <li class = "symptom">
                     {{language.questions[3].question[8]}}
                 </li>
             </div>
         </ul>
     </div>
-    <div class="row">
-        <div class = "col-sm-4"></div>
-        <div class="col-sm-4"><br></div>
-        <div class = "col-sm-4"></div>
-    </div>
-    <br> <Br> <Br> <br>
+    <br> <Br> <Br> <br> <br>
   <div class="row" id = "icons">
         <div class = "col-sm-4"><img id = "mg" src="/static/Img_1.jpg"></div>
         <div class="col-sm-4" >
@@ -220,10 +216,6 @@ margin: 10px;
 <audio autoplay>
     <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}" type="audio/mp4">
 </audio>
-    <div class="row">
-        <div class = "col-sm-11"></div>
-        <div class = "col-sm-1"><img style="height:65px; width:52px;" src="/static/speaker_90.png"></div>
-    </div>
 
 </div>
 </body>
