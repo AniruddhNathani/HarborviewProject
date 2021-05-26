@@ -204,13 +204,13 @@ margin: 10px;
 {% block images %}{% endblock %}
 <form method="POST" action = "/lang_index={{index}}/screening/final_response" id = "buttons">
     <div class="row">
-            <div class="col-sm-6"><button type="submit" name="yes_button" class="btn-yes" value="yes">{{language.questions[0].response[0].text}}</button></div>
-            <div class="col-sm-6"><button type="submit"  name="no_button" class="btn-no" value="no">{{language.questions[0].response[1].text}}</button></div>
+        <div class="col-sm-6"><button type="submit"  name="no_button" class="btn-no" value="no">{{language.questions[0].response[1].text}}</button></div>
+        <div class="col-sm-6"><button type="submit" name="yes_button" class="btn-yes" value="yes">{{language.questions[0].response[0].text}}</button></div>
     </div>
      <br>
     <div class="row">
-        <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
         <div class = "col-sm-6"><img class = "bt_images" src="/static/cross_250.png"></div>
+        <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
     </div>
 </form>
 <audio autoplay>
