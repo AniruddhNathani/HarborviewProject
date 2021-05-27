@@ -132,6 +132,13 @@ background: #FF7675;
 margin: 10px;
 }
 </style>
+<script type="text/javascript">
+ window.onload = function() {
+        var audioPlayer = document.getElementById("audio");
+        audioPlayer.load();
+        audioPlayer.play();
+    };
+</script>
 <body>
 <div class="containter">
     <div class="row" id = "question_row">
@@ -213,9 +220,11 @@ margin: 10px;
         <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
     </div>
 </form>
-<audio autoplay>
-    <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}" type="audio/mp4">
-</audio>
+    <center><audio id="audio" src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}"controls="controls" loop="loop"></audio></center>
+
+<!--<audio autoplay>-->
+<!--    <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}" type="audio/mp4">-->
+<!--</audio>-->
 
 </div>
 </body>
