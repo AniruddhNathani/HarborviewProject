@@ -61,10 +61,28 @@
           flex-direction: column;
         }
 
+h1
+{
+font-family: 'Encode Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 50px;
+text-align: center;
+color: #000000;
+}
+
+h3, a
+{
+font-family: 'Encode Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+}
         button[name="yes_button"]
         {
-            width: 420px;
-            height: 151px;
+            width: 220px;
+            height: 120px;
             grid-area: box;
             background-color: #FF767529;
             float: right;
@@ -73,8 +91,8 @@
         /* Rectangle 21 */
         button[name="no_button"]
         {
-            width: 420px;
-            height: 151px;
+            width: 220px;
+            height: 120px;
             grid-area: box;
             background-color:#55EFC430 ;
             float: right;
@@ -92,10 +110,15 @@
         font-weight: normal;
         font-size: 40px;
         line-height: 80px;
-        width: 250px;
+        width: 150px;
         height: 151px;
         }
 
+#alt
+{
+height: 40px;
+width: 40px;
+}
 
     </style>
 </head>
@@ -148,15 +171,14 @@
     {% if lang == '' %}
     <center><h1>Waiting for patient's response...</h1></center>
     {% endif %}
-<br><br>
-
+<br>
 <div class="d-flex flex-column">
 <div class="row" id="button1">
     {% if response.screen_one %}
-    <div class="col-sm-6" style="font-size:40px; vertical-align: middle;">
+    <div class="col-sm-8" style="font-size:40px; vertical-align: middle;">
         <h3 style="text-align:left">Have you tested POSITIVE for COVID-19 in the last 2 weeks?</h3>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         {% if response.screen_one == 'no' %}
             <button type="button" name="no_button" class = "btn" value = "no">{{sentence_case(response.screen_one)}}</button>
         {% endif %}
@@ -169,10 +191,10 @@
 <br><br>
 <div class="row" id="button2">
     {% if response.screen_two %}
-    <div class="col-sm-6" style="font-size:40px; vertical-align: middle;">
+    <div class="col-sm-8" style="font-size:40px; vertical-align: middle;">
         <h3 style="text-align:left">Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?</h3>
     </div>
-    <div class="col-sm-6" >
+    <div class="col-sm-4" >
         {% if response.screen_two == 'no' %}
         <button type="button" name="no_button" class = "btn" value = "no">{{sentence_case(response.screen_two)}}</button>
         {% endif%}
@@ -185,10 +207,10 @@
 <br><br>
 <div class="row" id="button3">
     {% if response.screen_three %}
-    <div class="col-sm-6" style="font-size:40px; vertical-align: middle;">
+    <div class="col-sm-8" style="font-size:40px; vertical-align: middle;">
         <h3 style="text-align:left">Have you traveled internationally in the last 14 days?</h3>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         {% if response.screen_three == 'no' %}
         <button type="button" name="no_button" class = "btn" value = "no">{{sentence_case(response.screen_three)}}</button>
         {% endif%}
@@ -201,10 +223,10 @@
 <br><br>
 <div class="row" id="button4">
     {% if response.screen_four %}
-    <div class="col-sm-6" style="font-size:40px; vertical-align: middle;">
+    <div class="col-sm-8" style="font-size:40px; vertical-align: middle;">
         <h3 style="text-align:left">Do you have any of these symptoms?: Cough, Runny nose, Fever above 100 degrees or  Chills, Sore throat, Shortness of breath, Nausea/ Vomiting/ Diarrhea, New loss of taste or smell, Headache/Muscle pain</h3>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         {% if response.screen_four == 'no' %}
         <button type="button" name="no_button" class = "btn" value = "no">{{sentence_case(response.screen_four)}}</button>
         {% endif%}
@@ -215,11 +237,11 @@
     {% endif %}
 </div>
 
-    <br><br><br><br>
+    <br><br>
     <center>
 <!--        {% block images %}{% endblock %}-->
     {% if session_flag == 1 %}
-            <img src="/static/alert.png">
+            <img id = "alt" src="/static/alert.png">
         <a style="font-size:35px; vertical-align: middle; color:#FF7675">Room the Patient Immediately!</a>
     {% endif%}
     {% if session_flag == 0 and lang != '' %}
