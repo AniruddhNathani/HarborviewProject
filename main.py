@@ -91,7 +91,7 @@ def final_response(index):
             session["response_list"]["screen_four"] = "no"
 
     for key, value in session["response_list"].items():
-        if key in ["screen_one", "screen_four"]:
+        if key in ["screen_one", "screen_two"]:
             if value == "yes":
                 session["flag"] = 1
                 break
