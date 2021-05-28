@@ -15,8 +15,8 @@ h1
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 72px;
-line-height: 90px;
+font-size: 50px;
+line-height: 80px;
 text-align: center;
 height: 111px;
 width: 934px;
@@ -31,16 +31,15 @@ color: #000000;
 
     #question_row
     {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding-right: 15%;
+    margin-top: 30px;
+    padding-right: 50%;
     }
 
      .bt_images
      {
      height: 80px;
      width: 92px;
-     margin-top: 5px;
+     margin-top: -10px;
      margin-left: 130px;
      }
 
@@ -73,8 +72,8 @@ float: right;
 
 #buttons
 {
-padding-left: 100px;
-padding-right: 15px;
+padding-left: 70px;
+padding-right: 50px;
 }
 
 .btn
@@ -94,9 +93,9 @@ margin-right: 40px;
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 42px;
+font-size: 35px;
 line-height: 45px;
-width: 339px;
+width: auto;
 height: 37px;
 }
 
@@ -105,10 +104,63 @@ height: 37px;
 margin-left: 100px;
 margin-right: 90px;
 padding: 15px;
+margin-bottm: 10px;
 }
 
+.btn-no, .btn-yes
+{
+font-family: Encode Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 80px;
+width: 250px;
+height: 151px;
+border-radius: 15px;
+}
 
+.btn-yes
+{
+background: #55EFC4;
+margin: 10px;
+}
+
+.btn-no
+{
+background: #FF7675;
+margin: 10px;
+}
+#audio
+{
+margin-left: 35%;
+}
+
+#spk
+{
+height: 70px;
+width: 60px;
+}
+
+#audbtn
+{
+margin-left: 50%;
+padding: 0px 15px 0px 15px;
+background-color: #dfe1f0;
+border: none;
+margin-bottom: 15px;
+}
 </style>
+<script type="text/javascript">
+ window.onload = function() {
+        var audioPlayer = document.getElementById("audio");
+        audioPlayer.load();
+        audioPlayer.play();
+    };
+    function playAudio()
+ {
+ document.getElementById("audio").play();
+ }
+</script>
 <body>
 <div class="containter">
     <div class="row" id = "question_row">
@@ -116,6 +168,8 @@ padding: 15px;
 <div class="col-sm-10"> <h1 id = "question">{{language.questions[3].question[0]}}</h1> </div>
         <div class = "col-sm-1"></div>
     </div>
+    <audio id="audio" src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}"></audio>
+    <button id = "audbtn" onclick="playAudio()" ><img id = "spk" src="/static/speaker_90.png"></button>
     <div class="row">
         <ul class = "listrow">
         <div class = "col-sm-4">
@@ -135,7 +189,7 @@ padding: 15px;
         </div>
         </ul>
     </div>
-    <br> <br> <br>
+    <br> <br> <br> <br> <br> <br>
     <div class="row">
         <ul class = "listrow">
             <div class = "col-sm-4">
@@ -155,28 +209,22 @@ padding: 15px;
             </div>
         </ul>
     </div>
-    <br> <br> <br> <br> <br>
+    <br> <br> <br> <br>
     <div class="row">
         <ul class = "listrow">
-            <div class = "col-sm-4">
+            <div class = "col-sm-6">
                 <li class = "symptom">
                     {{language.questions[3].question[7]}}
                 </li>
             </div>
-            <div class="col-sm-4"></div>
-            <div class = "col-sm-4">
+            <div class = "col-sm-6">
                 <li class = "symptom">
                     {{language.questions[3].question[8]}}
                 </li>
             </div>
         </ul>
     </div>
-    <div class="row">
-        <div class = "col-sm-4"></div>
-        <div class="col-sm-4"><br></div>
-        <div class = "col-sm-4"></div>
-    </div>
-    <br> <Br> <Br> <br>
+    <br> <Br> <Br> <br> <br>
   <div class="row" id = "icons">
         <div class = "col-sm-4"><img id = "mg" src="/static/Img_1.jpg"></div>
         <div class="col-sm-4" >
@@ -187,22 +235,20 @@ padding: 15px;
 {% block images %}{% endblock %}
 <form method="POST" action = "/lang_index={{index}}/screening/final_response" id = "buttons">
     <div class="row">
-        <div class="col-sm-6"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
-        <div class="col-sm-6"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
+        <div class="col-sm-6"><button type="submit"  name="no_button" class="btn-no" value="no">{{language.questions[0].response[1].text}}</button></div>
+        <div class="col-sm-6"><button type="submit" name="yes_button" class="btn-yes" value="yes">{{language.questions[0].response[0].text}}</button></div>
     </div>
      <br>
     <div class="row">
-        <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
         <div class = "col-sm-6"><img class = "bt_images" src="/static/cross_250.png"></div>
+        <div class = "col-sm-6"><img class = "bt_images" src="/static/check_250.png"></div>
     </div>
 </form>
-<audio autoplay>
-    <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}" type="audio/mp4">
-</audio>
-    <div class="row">
-        <div class = "col-sm-11"></div>
-        <div class = "col-sm-1"><img style="height:65px; width:52px;" src="/static/speaker_90.png"></div>
-    </div>
+
+
+<!--<audio autoplay>-->
+<!--    <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 5.m4a') }}" type="audio/mp4">-->
+<!--</audio>-->
 
 </div>
 </body>

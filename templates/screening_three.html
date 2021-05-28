@@ -31,9 +31,9 @@ color: #000000;
 
     #question_row
     {
-    margin-top: 100px;
-    margin-bottom: 70px;
-    padding-right: 15%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-right: 50%;
     }
 
      .bt_images
@@ -45,7 +45,8 @@ color: #000000;
 
     #icons
     {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    margin-right: 35px;
     }
 
     button[name="yes_button"]
@@ -69,24 +70,65 @@ float: right;
 
 #buttons
 {
-padding-left: 100px;
-padding-right: 15px;
+padding-left: 70px;
+padding-right: 50px;
 }
 
-.btn
+.btn-no, .btn-yes
 {
 font-family: Encode Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 48px;
+font-size: 40px;
 line-height: 80px;
-width: 339px;
-height: 37px;
-margin-right: 80px;
+width: 250px;
+height: 151px;
+border-radius: 15px;
 }
 
+.btn-yes
+{
+background: #55EFC4;
+margin: 10px;
+}
 
+.btn-no
+{
+background: #FF7675;
+margin: 10px;
+}
+
+#audio
+{
+margin-left: 35%;
+}
+
+#spk
+{
+height: 70px;
+width: 60px;
+}
+
+#audbtn
+{
+margin-left: 50%;
+padding: 0px 15px 0px 15px;
+background-color: #dfe1f0;
+border: none;
+}
 </style>
+<script type="text/javascript">
+ window.onload = function() {
+        var audioPlayer = document.getElementById("audio");
+        audioPlayer.load();
+        audioPlayer.play();
+    };
+
+  function playAudio()
+ {
+ document.getElementById("audio").play();
+ }
+</script>
 <body>
 <div class="containter">
     <div class="row" id = "question_row">
@@ -94,6 +136,9 @@ margin-right: 80px;
         <div class="col-sm-10"> <h1 id = "question">{{language.questions[2].question}}</h1> </div>
         <div class = "col-sm-1"></div>
     </div>
+    <br>
+    <audio id="audio" src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 4.m4a') }}"></audio>
+    <button id = "audbtn" onclick="playAudio()" ><img id = "spk" src="/static/speaker_90.png"></button>
     <div class="row" id = "icons">
         <div class = "col-sm-2"></div>
         <div class="col-sm-6" >
@@ -106,7 +151,7 @@ margin-right: 80px;
         <div class="row">
             <div class = "col-sm-2"></div>
             <div class = "col-sm-2"><img class = "bt_images" src="/static/check_250.png"></div>
-            <div class="col-sm-6"><button type="submit" name="yes_button" class = "btn" value = "yes">Yes</button></div>
+            <div class="col-sm-6"><button type="submit" name="yes_button" class="btn-yes" value="yes">{{language.questions[0].response[0].text}}</button></div>
             <div class = "col-sm-2"></div>
         </div>
         <br>
@@ -114,13 +159,15 @@ margin-right: 80px;
         <div class="row">
             <div class = "col-sm-2"></div>
             <div class = "col-sm-2"><img class = "bt_images" src="/static/cross_250.png"></div>
-            <div class="col-sm-6"><button type="submit" name="no_button" class = "btn" value = "no">No</button></div>
+            <div class="col-sm-6"><button type="submit" name="no_button" class="btn-no" value="no">{{language.questions[0].response[1].text}}</button></div>
             <div class = "col-sm-2"></div>
         </div>
     </form>
-    <audio autoplay>
-        <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 4.m4a') }}" type="audio/mp4">
-    </audio>
+
+
+<!--    <audio autoplay>-->
+<!--        <source src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 4.m4a') }}" type="audio/mp4">-->
+<!--    </audio>-->
 </div>
 </body>
 </html>

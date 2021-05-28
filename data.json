@@ -24,7 +24,7 @@
         ]
       },
       {
-        "question": "Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?",
+        "question": "Have you been in contact with someone who tested Positive for COVID-19 in the last 2 weeks?",
         "question_id": 1,
         "response": [
           {
@@ -256,7 +256,7 @@
         ]
       },
       {
-        "question": ["Waan kanaa gadii kun sitti jiraa?", "Qufaa",  "Furrii","Ho’ina nafaa kan digrii 100 olii? Dhaamochaa?", "Dhukkub kokkee keessa", "Afuurri sicitaa", "Lolloca/ didiga/ garaa kaasaa", "Waa dhandhamuufii urgeeffachuu dadhabdaa", "Mataa dhukkubii/Dhukkubbiib qaamaa"],
+        "question": ["Waan kanaa gadii kun sitti jiraa?", "Qufaa",  "Furrii","Ho’ina nafaa kan digrii 100 olii?", "Dhukkub kokkee keessa", "Afuurri sicitaa", "Lolloca/         didiga/garaa kaasaa", "Waa dhandhamuufii urgeeffachuu dadhabdaa", "Mataa dhukkubii/ Dhukkubbiib qaamaa"],
         "question_id": 3,
         "response": [
           {
