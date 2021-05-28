@@ -32,8 +32,8 @@ color: #000000;
 
     #question_row
     {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 55px;
     padding-right: 50%;
     }
 
@@ -106,6 +106,20 @@ margin: 10px;
 margin-left: 35%;
 }
 
+#spk
+{
+height: 70px;
+width: 60px;
+}
+
+#audbtn
+{
+margin-left: 50%;
+padding: 0px 15px 0px 15px;
+background-color: #dfe1f0;
+border: none;
+}
+
 </style>
 <script type="text/javascript">
  window.onload = function() {
@@ -113,6 +127,11 @@ margin-left: 35%;
         audioPlayer.load();
         audioPlayer.play();
     };
+
+ function playAudio()
+ {
+ document.getElementById("audio").play();
+ }
 </script>
 <body>
 <div class="containter">
@@ -121,7 +140,8 @@ margin-left: 35%;
         <div class="col-sm-10"> <h1 id = "question">{{language.questions[0].question}}</h1> </div>
         <div class = "col-sm-1"></div>
     </div>
-    <audio id="audio" src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 2.m4a') }}" controls="controls" loop="loop"></audio>
+ <audio id="audio" src="{{ url_for('static', filename=index ~ '/' ~ language.trns_name ~ ' 2.m4a') }}"></audio>
+ <button id = "audbtn" onclick="playAudio()" ><img id = "spk" src="/static/speaker_90.png"></button>
     <div class="row" id = "icons">
         <div class = "col-sm-2"></div>
         <div class="col-sm-10" >
