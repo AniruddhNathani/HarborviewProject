@@ -243,9 +243,15 @@ width: 40px;
     {% if session_flag == 1 %}
             <img id = "alt" src="/static/alert.png">
         <a style="font-size:35px; vertical-align: middle; color:#FF7675">Room the Patient Immediately!</a>
-    {% endif%}
-    {% if session_flag == 0 and lang != '' %}
-        <a style="font-size:35px; vertical-align: middle; color:#55EFC4">Patient is Safe</a>
+    {%else%}
+        {% if triage_flag == 1 %}
+        <img id = "alt" src="/static/alert.png">
+        <a style="font-size:35px; vertical-align: middle; color:#FF7675">Nurse Triage!</a>
+        {%else%}
+            {% if lang != '' %}
+                <a style="font-size:35px; vertical-align: middle; color:#55EFC4">Patient is Safe!</a>
+            {% endif%}
+        {% endif%}
     {% endif%}
     </center>
 </div>

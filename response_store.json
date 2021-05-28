@@ -1,1 +1,1 @@
-{"flag": 1, "language": "Cantonese", "response_list": {"screen_four": "no", "screen_one": "yes", "screen_three": "yes", "screen_two": "no"}}
+{"flag": 0, "language": "English", "response_list": {"screen_four": "yes", "screen_one": "no", "screen_three": "no", "screen_two": "no"}, "triage_flag": 1}

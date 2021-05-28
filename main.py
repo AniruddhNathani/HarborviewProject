@@ -18,6 +18,7 @@ def welcome():
     session.clear()
     session["response_list"] = dict(defaultdict())
     session["flag"] = 0
+    session["triage_flag"] = 0
     session["language"] = ''
 
     return render_template("welcome.html")
@@ -97,8 +98,14 @@ def final_response(index):
                 break
             else:
                 session["flag"] = 0
+        if key in ["screen_four"]:
+            if value == "yes":
+                session["triage_flag"] = 1
+            else:
+                session["triage_flag"] = 0
 
-    response_dict = {"response_list": session["response_list"], "flag": session["flag"], "language": session["language"]}
+
+    response_dict = {"response_list": session["response_list"], "flag": session["flag"], "language": session["language"], "triage_flag": session["triage_flag"]}
     response_file = open("response_store.json", "w", encoding='utf-8')
     json.dump(response_dict, response_file)
     response_file.close()
@@ -126,8 +133,13 @@ def patient_response():
     else:
         session_language = ''
 
+    if response_dict["triage_flag"]:
+        session_triage_flag = response_dict["triage_flag"]
+    else:
+        session_triage_flag = 0
+
     response_file.close()
-    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language, session_flag=session_flag)
+    return render_template("patient_responses.html", response=json.loads(json.dumps(response_list)), lang=session_language, session_flag=session_flag, triage_flag=session_triage_flag)
 
 
 @app.route("/back-office-languages", methods=["GET", "POST"])
