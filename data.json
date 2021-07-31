@@ -8,6 +8,7 @@
     "goodbye": "Thank you for answering these questions.",
     "interpreter": "I need an interpreter right now.",
     "help": "I need an interpreter to help me with these questions.",
+    "viral_swab_video_link":"",
     "questions": [
       {
         "question": "Have you tested POSITIVE for COVID-19 in the last 2 weeks?",
@@ -76,6 +77,7 @@
     "goodbye": "እነዚህን ጥያቄዎች ስለመለሱልን እናመሰግናለን፡",
     "interpreter": "አሁን  አስተርጓሚ እፈልጋለሁ",
     "help": "ይህንን ጥያቄ በተመለከተ የሚያግዘኝ አስተርጓሚ እፈልጋለሁ",
+    "viral_swab_video_link": "https://www.youtube.com/embed/N6A77bUK6tg",
     "questions": [
       {
         "question": "ባለፉት 2 ሳምንታት ውስጥ ኮቪድ-19 ተመርምረው ውጤቱ ፖዘቲቭ ነበርን?",
@@ -144,6 +146,7 @@
     "goodbye": "شكرا لك على الإجابة على هذه الأسئلة.",
     "interpreter": "أحتاج إلى مترجم فوري الآن.",
     "help": "أحتاج إلى مترجم لمساعدتي في هذه الأسئلة.ة",
+    "viral_swab_video_link":"https://www.youtube.com/embed/pLeAwpDPmRM" ,
     "questions": [
       {
         "question": "           هل كانت نتيجة أختبارك أنت إيجابية لفيروس كوفيد-19 (كورونا) فى الأسبوعين الماضيين؟",
@@ -212,6 +215,7 @@
     "goodbye": "Gaaffiwan kana deebisuu keesaniif galatoomaa.",
     "interpreter": "Nama Afaan hiiku ammaan tana nabarbaachisa.",
     "help": "Gaaffiwan kanaa nama nagargaaru nabarbaachisa.",
+    "viral_swab_video_link":"https://www.youtube.com/embed/F8VBUIpf-S4" ,
     "questions": [
       {
         "question": "Torban lamaan darban keessa COVID-19 laallamtee Siqabeera way jedhamtee?",
@@ -280,6 +284,7 @@
     "goodbye": "Waad ku mahadsantahay ka jawaabida su'aalahan.",
     "interpreter": "Waxaan u baahanahay turjubaan hada.",
     "help": "Waxaan u baahanahay turjubaan iga caawiya su'aalahan.",
+    "viral_swab_video_link":"https://www.youtube.com/embed/kWAp4aVqzDg" ,
     "questions": [
       {
         "question": "Miyaa lagaa Helay Xanuunka COVID-19 labadii toddobaad ee la soo dhaafay?",
@@ -348,6 +353,7 @@
     "goodbye": "感谢你回答这些问题。",
     "interpreter": "我现在需要口译员。",
     "help": "我需要口译员来帮我完成这些问题。",
+    "viral_swab_video_link":"https://www.youtube.com/embed/Tc4bn9Cei1k" ,
     "questions": [
       {
         "question": "在过去2周内，您是否新冠 (COVID-19) 检测呈阳性？",
@@ -416,6 +422,7 @@
     "goodbye": "Cảm ơn quý vị đã trả lời những câu hỏi này.",
     "interpreter": "Tôi cần thông dịch viên ngay bây giờ.",
     "help": "Tôi cần thông dịch viên giúp tôi với những câu hỏi này.",
+    "viral_swab_video_link":"https://www.youtube.com/embed/bkY7yRL_I5Y" ,
     "questions": [
       {
         "question": "Quý vị có được xét nghiệm DƯƠNG TÍNH COVID-19 trong 2 tuần qua không?",
@@ -484,6 +491,7 @@
     "goodbye": "Gracias por contestar estas preguntas.",
     "interpreter": "Necesito un intérprete ahora mismo.",
     "help": "Necesito un intérprete que me ayude con estas preguntas.",
+    "viral_swab_video_link":"https://www.youtube.com/embed/yzckN7IaatE" ,
     "questions": [
       {
         "question": "¿Ha tenido una prueba POSITIVA de COVID-19 en las últimas 2 semanas?",
